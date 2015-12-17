@@ -1,12 +1,12 @@
 //
-//  MainViewController.m
+//  DaiLive2DViewController.m
 //  DaiLive2DPlayground
 //
-//  Created by DaidoujiChen on 2015/12/16.
+//  Created by DaidoujiChen on 2015/12/17.
 //  Copyright © 2015年 DaidoujiChen. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "DaiLive2DViewController.h"
 #import <OpenGLES/EAGL.h>
 #import <OpenGLES/ES1/gl.h>
 #import "Live2D.h"
@@ -15,19 +15,16 @@
 
 using namespace live2d;
 
-@interface MainViewController ()
+@interface DaiLive2DViewController ()
 
 @property (nonatomic, strong) EAGLContext *context;
 @property (nonatomic) Live2DModelIPhone *live2DModel;
-@property (nonatomic, assign) CGFloat headX;
-@property (nonatomic, assign) CGFloat headY;
-@property (nonatomic, assign) CGFloat headZ;
 
 @end
 
-@implementation MainViewController
+@implementation DaiLive2DViewController
 
-#pragma mark - GLKView and GLKViewController delegate methods
+#pragma mark - GLKViewDelegate
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {
     glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
@@ -40,6 +37,8 @@ using namespace live2d;
 
 #pragma mark - private instance method
 
+#pragma mark * OpenGLES
+
 - (void)setupGL {
     [EAGLContext setCurrentContext:self.context];
 }
@@ -48,27 +47,15 @@ using namespace live2d;
     [EAGLContext setCurrentContext:self.context];
 }
 
+#pragma mark * live2d model textures
+
 - (NSArray *)textures {
     return @[ @"texture_00", @"texture_01", @"texture_02" ];
 }
 
-#pragma mark - life cycle
+#pragma mark * init live2d model
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    self.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES1];
-
-    if (!self.context) {
-        NSLog(@"Failed to create ES context");
-        return;
-    }
-    
-    GLKView *view = (GLKView *)self.view;
-    view.context = self.context;
-    view.drawableDepthFormat = GLKViewDrawableDepthFormat24;
-    [self setupGL];
-    
+- (void)setupModel {
     NSString *modelNamed = @"haru";
     NSString *modelPath = [[NSBundle mainBundle] pathForResource:modelNamed ofType:@"moc"];
     self.live2DModel = Live2DModelIPhone::loadModel(modelPath.UTF8String);
@@ -85,6 +72,26 @@ using namespace live2d;
     CGFloat width = CGRectGetWidth([UIScreen mainScreen].bounds);
     CGFloat height = CGRectGetHeight([UIScreen mainScreen].bounds);
     glOrthof(0, modelWidth, modelWidth / (width / height), 0, 0.5f, -0.5f);
+}
+
+#pragma mark - life cycle
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES1];
+    
+    if (!self.context) {
+        NSLog(@"Failed to create ES context");
+        return;
+    }
+    
+    // 設置畫面相關設定
+    GLKView *view = (GLKView *)self.view;
+     view.context = self.context;
+     view.drawableDepthFormat = GLKViewDrawableDepthFormat24;
+    [self setupGL];
+    [self setupModel];
 }
 
 @end
