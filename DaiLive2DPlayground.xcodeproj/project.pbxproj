@@ -10,7 +10,7 @@
 		1C471A9E1C215D2A0050FAFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C471A9D1C215D2A0050FAFB /* main.m */; };
 		1C471AA11C215D2A0050FAFB /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1C471AA01C215D2A0050FAFB /* AppDelegate.mm */; };
 		1C471AA91C215D2A0050FAFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C471AA81C215D2A0050FAFB /* Assets.xcassets */; };
-		1C471AB71C215DD90050FAFB /* MainViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1C471AB51C215DD90050FAFB /* MainViewController.mm */; };
+		1C471AB71C215DD90050FAFB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C471AB51C215DD90050FAFB /* MainViewController.m */; };
 		1C471AB81C215DD90050FAFB /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C471AB61C215DD90050FAFB /* MainViewController.xib */; };
 		1C471ABA1C215EB40050FAFB /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C471AB91C215EB40050FAFB /* Launch Screen.storyboard */; };
 		1C471B5A1C2166500050FAFB /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C471B581C2166500050FAFB /* GLKit.framework */; };
@@ -20,6 +20,7 @@
 		1C471C451C2175A20050FAFB /* texture_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C471C411C2175A20050FAFB /* texture_02.png */; };
 		1C471C461C2175A20050FAFB /* haru.moc in Resources */ = {isa = PBXBuildFile; fileRef = 1C471C421C2175A20050FAFB /* haru.moc */; };
 		1C471C481C217DCB0050FAFB /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C471C471C217DCB0050FAFB /* CoreMotion.framework */; };
+		1CC545E11C2256DF00200870 /* DaiLive2DViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1CC545E01C2256DF00200870 /* DaiLive2DViewController.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +31,7 @@
 		1C471AA81C215D2A0050FAFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C471AAD1C215D2A0050FAFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C471AB41C215DD90050FAFB /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		1C471AB51C215DD90050FAFB /* MainViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainViewController.mm; sourceTree = "<group>"; };
+		1C471AB51C215DD90050FAFB /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		1C471AB61C215DD90050FAFB /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		1C471AB91C215EB40050FAFB /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		1C471B581C2166500050FAFB /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
@@ -40,6 +41,8 @@
 		1C471C411C2175A20050FAFB /* texture_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture_02.png; sourceTree = "<group>"; };
 		1C471C421C2175A20050FAFB /* haru.moc */ = {isa = PBXFileReference; lastKnownFileType = file; path = haru.moc; sourceTree = "<group>"; };
 		1C471C471C217DCB0050FAFB /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		1CC545DF1C2256DF00200870 /* DaiLive2DViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaiLive2DViewController.h; sourceTree = "<group>"; };
+		1CC545E01C2256DF00200870 /* DaiLive2DViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DaiLive2DViewController.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,7 @@
 		1C471A9B1C215D2A0050FAFB /* DaiLive2DPlayground */ = {
 			isa = PBXGroup;
 			children = (
+				1CC545DE1C2256C700200870 /* DaiLive2DViewController */,
 				1C471A9F1C215D2A0050FAFB /* AppDelegate.h */,
 				1C471AA01C215D2A0050FAFB /* AppDelegate.mm */,
 				1C471AB31C215DB20050FAFB /* MainViewController */,
@@ -100,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				1C471AB41C215DD90050FAFB /* MainViewController.h */,
-				1C471AB51C215DD90050FAFB /* MainViewController.mm */,
+				1C471AB51C215DD90050FAFB /* MainViewController.m */,
 				1C471AB61C215DD90050FAFB /* MainViewController.xib */,
 			);
 			path = MainViewController;
@@ -133,6 +137,15 @@
 				1C471C411C2175A20050FAFB /* texture_02.png */,
 			);
 			path = haru.1024;
+			sourceTree = "<group>";
+		};
+		1CC545DE1C2256C700200870 /* DaiLive2DViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1CC545DF1C2256DF00200870 /* DaiLive2DViewController.h */,
+				1CC545E01C2256DF00200870 /* DaiLive2DViewController.mm */,
+			);
+			path = DaiLive2DViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,8 +224,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C471AA11C215D2A0050FAFB /* AppDelegate.mm in Sources */,
-				1C471AB71C215DD90050FAFB /* MainViewController.mm in Sources */,
+				1C471AB71C215DD90050FAFB /* MainViewController.m in Sources */,
 				1C471A9E1C215D2A0050FAFB /* main.m in Sources */,
+				1CC545E11C2256DF00200870 /* DaiLive2DViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
