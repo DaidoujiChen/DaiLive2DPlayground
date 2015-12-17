@@ -27,10 +27,13 @@ using namespace live2d;
 #pragma mark - GLKViewDelegate
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {
-    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+    glClearColor(1.0, 1.0, 1.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    double t = UtSystem::getUserTimeMSec() / 1000.0 ;
-    self.live2DModel->setParamFloat("PARAM_ANGLE_X", 30 * sin(t));
+    l2d_int64 time = UtSystem::getUserTimeMSec();
+    double t = time / 1000.0;
+    self.live2DModel->setParamFloat("PARAM_BODY_ANGLE_Z", 10 * sin(t));
+    self.live2DModel->setParamFloat("PARAM_HAIR_FRONT", sin(t));
+    self.live2DModel->setParamFloat("PARAM_HAIR_BACK", sin(t));
     self.live2DModel->update();
     self.live2DModel->draw();
 }
@@ -67,6 +70,8 @@ using namespace live2d;
         int glTexNo = textureInfo.name;
         self.live2DModel->setTexture(index, glTexNo);
     }
+    self.live2DModel->setParamFloat("PARAM_EYE_L_SMILE", 1.0f);
+    self.live2DModel->setParamFloat("PARAM_EYE_R_SMILE", 1.0f);
     
     CGFloat modelWidth = self.live2DModel->getCanvasWidth();
     CGFloat width = CGRectGetWidth([UIScreen mainScreen].bounds);
