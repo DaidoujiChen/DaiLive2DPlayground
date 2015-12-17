@@ -15,11 +15,8 @@
 		1C471ABA1C215EB40050FAFB /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C471AB91C215EB40050FAFB /* Launch Screen.storyboard */; };
 		1C471B5A1C2166500050FAFB /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C471B581C2166500050FAFB /* GLKit.framework */; };
 		1C471B5B1C2166500050FAFB /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C471B591C2166500050FAFB /* OpenGLES.framework */; };
-		1C471C431C2175A20050FAFB /* texture_00.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C471C3F1C2175A20050FAFB /* texture_00.png */; };
-		1C471C441C2175A20050FAFB /* texture_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C471C401C2175A20050FAFB /* texture_01.png */; };
-		1C471C451C2175A20050FAFB /* texture_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C471C411C2175A20050FAFB /* texture_02.png */; };
-		1C471C461C2175A20050FAFB /* haru.moc in Resources */ = {isa = PBXBuildFile; fileRef = 1C471C421C2175A20050FAFB /* haru.moc */; };
 		1C471C481C217DCB0050FAFB /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C471C471C217DCB0050FAFB /* CoreMotion.framework */; };
+		1C7603D31C22B3AA00B315F3 /* Haru in Resources */ = {isa = PBXBuildFile; fileRef = 1C7603D21C22B3AA00B315F3 /* Haru */; };
 		1CC545E11C2256DF00200870 /* DaiLive2DViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1CC545E01C2256DF00200870 /* DaiLive2DViewController.mm */; };
 /* End PBXBuildFile section */
 
@@ -36,11 +33,8 @@
 		1C471AB91C215EB40050FAFB /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		1C471B581C2166500050FAFB /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		1C471B591C2166500050FAFB /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		1C471C3F1C2175A20050FAFB /* texture_00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture_00.png; sourceTree = "<group>"; };
-		1C471C401C2175A20050FAFB /* texture_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture_01.png; sourceTree = "<group>"; };
-		1C471C411C2175A20050FAFB /* texture_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture_02.png; sourceTree = "<group>"; };
-		1C471C421C2175A20050FAFB /* haru.moc */ = {isa = PBXFileReference; lastKnownFileType = file; path = haru.moc; sourceTree = "<group>"; };
 		1C471C471C217DCB0050FAFB /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		1C7603D21C22B3AA00B315F3 /* Haru */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Haru; sourceTree = "<group>"; };
 		1CC545DF1C2256DF00200870 /* DaiLive2DViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaiLive2DViewController.h; sourceTree = "<group>"; };
 		1CC545E01C2256DF00200870 /* DaiLive2DViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DaiLive2DViewController.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,20 +117,9 @@
 		1C471B5D1C2166BE0050FAFB /* Live2DResource */ = {
 			isa = PBXGroup;
 			children = (
-				1C471C3E1C2175A20050FAFB /* haru.1024 */,
-				1C471C421C2175A20050FAFB /* haru.moc */,
+				1C7603D21C22B3AA00B315F3 /* Haru */,
 			);
 			path = Live2DResource;
-			sourceTree = "<group>";
-		};
-		1C471C3E1C2175A20050FAFB /* haru.1024 */ = {
-			isa = PBXGroup;
-			children = (
-				1C471C3F1C2175A20050FAFB /* texture_00.png */,
-				1C471C401C2175A20050FAFB /* texture_01.png */,
-				1C471C411C2175A20050FAFB /* texture_02.png */,
-			);
-			path = haru.1024;
 			sourceTree = "<group>";
 		};
 		1CC545DE1C2256C700200870 /* DaiLive2DViewController */ = {
@@ -206,13 +189,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C7603D31C22B3AA00B315F3 /* Haru in Resources */,
 				1C471ABA1C215EB40050FAFB /* Launch Screen.storyboard in Resources */,
-				1C471C441C2175A20050FAFB /* texture_01.png in Resources */,
-				1C471C431C2175A20050FAFB /* texture_00.png in Resources */,
-				1C471C451C2175A20050FAFB /* texture_02.png in Resources */,
 				1C471AA91C215D2A0050FAFB /* Assets.xcassets in Resources */,
 				1C471AB81C215DD90050FAFB /* MainViewController.xib in Resources */,
-				1C471C461C2175A20050FAFB /* haru.moc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
