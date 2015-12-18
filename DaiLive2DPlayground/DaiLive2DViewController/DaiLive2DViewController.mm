@@ -17,6 +17,7 @@ using namespace live2d;
 
 @interface DaiLive2DViewController ()
 
+@property (nonatomic, strong) Live2DInfoLoader *loader;
 @property (nonatomic, strong) EAGLContext *context;
 @property (nonatomic) Live2DModelIPhone *live2DModel;
 
@@ -82,26 +83,18 @@ using namespace live2d;
     [EAGLContext setCurrentContext:self.context];
 }
 
-#pragma mark * live2d model textures
-
-- (NSArray *)textures {
-    return @[ @"Haru/haru.1024/texture_00", @"Haru/haru.1024/texture_01", @"Haru/haru.1024/texture_02" ];
-}
-
 #pragma mark * init live2d model
 
 - (void)setupModel {
-    NSString *modelNamed = @"Haru/haru";
-    NSString *modelPath = [[NSBundle mainBundle] pathForResource:modelNamed ofType:@"moc"];
-    self.live2DModel = Live2DModelIPhone::loadModel(modelPath.UTF8String);
+    self.live2DModel = Live2DModelIPhone::loadModel(self.loader.model.UTF8String);
     
-    for (int index = 0; index < self.textures.count; index++) {
-        NSString *imageNamed = self.textures[index];
-        NSString *texturePath = [[NSBundle mainBundle] pathForResource:imageNamed ofType:@"png"];
+    for (int index = 0; index < self.loader.textures.count; index++) {
+        NSString *texturePath = self.loader.textures[index];
         GLKTextureInfo *textureInfo = [GLKTextureLoader textureWithContentsOfFile:texturePath options:@{ GLKTextureLoaderApplyPremultiplication: @(YES), GLKTextureLoaderGenerateMipmaps: @(YES) } error:nil];
         int glTexNo = textureInfo.name;
         self.live2DModel->setTexture(index, glTexNo);
     }
+
     self.live2DModel->setParamFloat("PARAM_EYE_L_SMILE", 1.0);
     self.live2DModel->setParamFloat("PARAM_EYE_R_SMILE", 1.0);
     self.live2DModel->setParamFloat("PARAM_ARM_L_A", -1.0);
@@ -109,7 +102,18 @@ using namespace live2d;
     self.isEyeClosing = NO;
 }
 
-#pragma mark - life cycle
+#pragma mark - Life Cycle
+
+- (id)initFromBundlePath:(NSString *)path {
+    self = [super init];
+    if (self) {
+        self.loader = [[Live2DInfoLoader alloc] initFromBundlePath:path];
+        if (!self.loader) {
+            return nil;
+        }
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

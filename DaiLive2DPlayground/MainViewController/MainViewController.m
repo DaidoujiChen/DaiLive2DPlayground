@@ -23,8 +23,8 @@
 - (void)setupLive2DModel {
     
     // 建置 live2d model 畫面
-    self.live2DViewController = [DaiLive2DViewController new];
-    self.live2DViewController.view.frame = self.view.bounds;;
+    self.live2DViewController = [[DaiLive2DViewController alloc] initFromBundlePath:@"/Haru/model.plist"];
+    self.live2DViewController.view.frame = self.view.bounds;
     [self.view addSubview:self.live2DViewController.view];
 }
 
