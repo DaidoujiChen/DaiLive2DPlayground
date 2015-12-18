@@ -32,6 +32,18 @@ using namespace live2d;
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {
     glClearColor(1.0, 1.0, 1.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    CGFloat modelWidth = self.live2DModel->getCanvasWidth();
+    CGFloat width = CGRectGetWidth([UIScreen mainScreen].bounds);
+    CGFloat height = CGRectGetHeight([UIScreen mainScreen].bounds);
+    glLoadIdentity();
+    
+    double value = -self.scale;
+    double left = self.position.x - value;
+    double right = (modelWidth + self.position.x) + value;
+    double bottom = (((modelWidth + value) / (width / height)) + self.position.y) + value;
+    double top = self.position.y - value;
+    glOrthof(left, right, bottom, top, 0.5, -0.5);
+    
     l2d_int64 time = UtSystem::getUserTimeMSec();
     double globalTime = time / 1000.0;
     self.live2DModel->setParamFloat("PARAM_ANGLE_Z", 30.0 * sin(globalTime));
@@ -95,11 +107,6 @@ using namespace live2d;
     self.live2DModel->setParamFloat("PARAM_ARM_L_A", -1.0);
     self.live2DModel->setParamFloat("PARAM_ARM_R_A", -1.0);
     self.isEyeClosing = NO;
-    
-    CGFloat modelWidth = self.live2DModel->getCanvasWidth();
-    CGFloat width = CGRectGetWidth([UIScreen mainScreen].bounds);
-    CGFloat height = CGRectGetHeight([UIScreen mainScreen].bounds);
-    glOrthof(0, modelWidth, modelWidth / (width / height), 0, 0.5f, -0.5f);
 }
 
 #pragma mark - life cycle
@@ -108,6 +115,8 @@ using namespace live2d;
     [super viewDidLoad];
     
     self.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES1];
+    self.scale = 1.0;
+    self.position = CGPointZero;
     
     if (!self.context) {
         NSLog(@"Failed to create ES context");

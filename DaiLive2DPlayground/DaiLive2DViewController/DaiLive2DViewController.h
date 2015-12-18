@@ -10,4 +10,7 @@
 
 @interface DaiLive2DViewController : GLKViewController
 
+@property (nonatomic, assign) CGFloat scale;
+@property (nonatomic, assign) CGPoint position;
+
 @end
