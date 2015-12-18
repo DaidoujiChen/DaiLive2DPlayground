@@ -45,7 +45,7 @@
 }
 
 - (Live2DParameterValue *)objectForKeyedSubscript:(NSString *)key {
-    return [[Live2DParameterValue alloc] initWithMax:[self.parameters[key][@"Max"] doubleValue] andMin:[self.parameters[key][@"Max"] doubleValue]];
+    return [[Live2DParameterValue alloc] initWithMax:[self.parameters[key][@"Max"] doubleValue] andMin:[self.parameters[key][@"Min"] doubleValue]];
 }
 
 @end

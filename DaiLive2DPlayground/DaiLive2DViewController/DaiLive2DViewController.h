@@ -16,5 +16,7 @@
 @property (nonatomic, assign) CGPoint position;
 
 - (id)initFromBundlePath:(NSString *)path;
+- (double)valueForParameter:(NSString *)parameter;
+- (void)setValue:(double)value forParameter:(NSString *)parameter;
 
 @end

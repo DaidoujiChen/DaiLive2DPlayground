@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import <GLKit/GLKit.h>
 
-@interface MainViewController : UIViewController //<GLKViewDelegate>
+@interface MainViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
 @end

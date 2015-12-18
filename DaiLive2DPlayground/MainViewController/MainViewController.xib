@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
             <connections>
+                <outlet property="floatingView" destination="dsp-gp-OpY" id="Mxj-GV-x2w"/>
+                <outlet property="parameterTextField" destination="ZYH-SU-Tzk" id="Y9f-9O-0Z4"/>
+                <outlet property="valueSlider" destination="S2K-QD-bLC" id="kgW-5L-Q3c"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="IyP-2F-XKF"/>
             </connections>
         </placeholder>
@@ -14,7 +16,54 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dsp-gp-OpY">
+                    <rect key="frame" x="0.0" y="20" width="600" height="60"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MP8-0j-fBf">
+                            <rect key="frame" x="0.0" y="0.0" width="20" height="60"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="6mu-sT-52z"/>
+                                <constraint firstAttribute="height" constant="60" id="sUG-UV-NU5"/>
+                            </constraints>
+                        </view>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="S2K-QD-bLC">
+                            <rect key="frame" x="26" y="30" width="568" height="31"/>
+                            <connections>
+                                <action selector="onParameterValueChange:" destination="-1" eventType="valueChanged" id="Gxh-fT-MyI"/>
+                            </connections>
+                        </slider>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZYH-SU-Tzk">
+                            <rect key="frame" x="28" y="0.0" width="564" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="2RN-ss-9hJ"/>
+                        <constraint firstItem="MP8-0j-fBf" firstAttribute="leading" secondItem="dsp-gp-OpY" secondAttribute="leading" id="5Nn-MP-KxC"/>
+                        <constraint firstItem="ZYH-SU-Tzk" firstAttribute="leading" secondItem="MP8-0j-fBf" secondAttribute="trailing" constant="8" id="BsB-jy-5kS"/>
+                        <constraint firstItem="MP8-0j-fBf" firstAttribute="top" secondItem="dsp-gp-OpY" secondAttribute="top" id="CUC-cJ-1mN"/>
+                        <constraint firstItem="S2K-QD-bLC" firstAttribute="top" secondItem="ZYH-SU-Tzk" secondAttribute="bottom" id="Pug-9a-9U3"/>
+                        <constraint firstItem="ZYH-SU-Tzk" firstAttribute="leading" secondItem="MP8-0j-fBf" secondAttribute="trailing" constant="8" id="UH8-XK-UPD"/>
+                        <constraint firstAttribute="trailing" secondItem="S2K-QD-bLC" secondAttribute="trailing" constant="8" id="V1L-yY-VPA"/>
+                        <constraint firstItem="ZYH-SU-Tzk" firstAttribute="top" secondItem="dsp-gp-OpY" secondAttribute="top" id="X8b-7J-hoV"/>
+                        <constraint firstItem="S2K-QD-bLC" firstAttribute="top" secondItem="ZYH-SU-Tzk" secondAttribute="bottom" id="knJ-m0-MGd"/>
+                        <constraint firstAttribute="bottom" secondItem="S2K-QD-bLC" secondAttribute="bottom" id="qQc-My-Bws"/>
+                        <constraint firstAttribute="trailing" secondItem="ZYH-SU-Tzk" secondAttribute="trailing" constant="8" id="vA3-qM-lmo"/>
+                        <constraint firstAttribute="bottom" secondItem="MP8-0j-fBf" secondAttribute="bottom" id="vZ2-BM-Atc"/>
+                        <constraint firstItem="S2K-QD-bLC" firstAttribute="leading" secondItem="MP8-0j-fBf" secondAttribute="trailing" constant="8" id="xvM-ar-9HL"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="dsp-gp-OpY" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="Ayp-JK-vkd"/>
+                <constraint firstItem="dsp-gp-OpY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="QBV-qu-nM7"/>
+                <constraint firstItem="dsp-gp-OpY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="f3d-qb-VYz"/>
+            </constraints>
         </view>
     </objects>
 </document>

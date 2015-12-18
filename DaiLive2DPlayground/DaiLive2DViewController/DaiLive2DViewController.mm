@@ -71,6 +71,8 @@ using namespace live2d;
     self.live2DModel->draw();
 }
 
+
+
 #pragma mark - private instance method
 
 #pragma mark * OpenGLES
@@ -100,6 +102,16 @@ using namespace live2d;
     self.live2DModel->setParamFloat("PARAM_ARM_L_A", -1.0);
     self.live2DModel->setParamFloat("PARAM_ARM_R_A", -1.0);
     self.isEyeClosing = NO;
+}
+
+#pragma mark - Instance Method
+
+- (double)valueForParameter:(NSString *)parameter {
+    return self.live2DModel->getParamFloat(parameter.UTF8String);
+}
+
+- (void)setValue:(double)value forParameter:(NSString *)parameter {
+    self.live2DModel->setParamFloat(parameter.UTF8String, value);
 }
 
 #pragma mark - Life Cycle
