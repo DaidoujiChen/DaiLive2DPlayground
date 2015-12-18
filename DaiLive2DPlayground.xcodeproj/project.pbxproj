@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01FFBD051C24558B0039A5A7 /* Live2DParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FFBD041C24558B0039A5A7 /* Live2DParameter.m */; };
 		1C471A9E1C215D2A0050FAFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C471A9D1C215D2A0050FAFB /* main.m */; };
 		1C471AA11C215D2A0050FAFB /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1C471AA01C215D2A0050FAFB /* AppDelegate.mm */; };
 		1C471AA91C215D2A0050FAFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C471AA81C215D2A0050FAFB /* Assets.xcassets */; };
@@ -18,9 +19,12 @@
 		1C471C481C217DCB0050FAFB /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C471C471C217DCB0050FAFB /* CoreMotion.framework */; };
 		1C7603D31C22B3AA00B315F3 /* Haru in Resources */ = {isa = PBXBuildFile; fileRef = 1C7603D21C22B3AA00B315F3 /* Haru */; };
 		1CC545E11C2256DF00200870 /* DaiLive2DViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1CC545E01C2256DF00200870 /* DaiLive2DViewController.mm */; };
+		1CD60DD31C23DB4A002ABB0E /* Live2DInfoLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD60DD21C23DB4A002ABB0E /* Live2DInfoLoader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01FFBD031C24558B0039A5A7 /* Live2DParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Live2DParameter.h; sourceTree = "<group>"; };
+		01FFBD041C24558B0039A5A7 /* Live2DParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Live2DParameter.m; sourceTree = "<group>"; };
 		1C471A991C215D2A0050FAFB /* DaiLive2DPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaiLive2DPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C471A9D1C215D2A0050FAFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1C471A9F1C215D2A0050FAFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -37,6 +41,8 @@
 		1C7603D21C22B3AA00B315F3 /* Haru */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Haru; sourceTree = "<group>"; };
 		1CC545DF1C2256DF00200870 /* DaiLive2DViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaiLive2DViewController.h; sourceTree = "<group>"; };
 		1CC545E01C2256DF00200870 /* DaiLive2DViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DaiLive2DViewController.mm; sourceTree = "<group>"; };
+		1CD60DD11C23DB4A002ABB0E /* Live2DInfoLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Live2DInfoLoader.h; sourceTree = "<group>"; };
+		1CD60DD21C23DB4A002ABB0E /* Live2DInfoLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Live2DInfoLoader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,10 +131,22 @@
 		1CC545DE1C2256C700200870 /* DaiLive2DViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1CD60DD01C23DB29002ABB0E /* Live2DInfoLoader */,
 				1CC545DF1C2256DF00200870 /* DaiLive2DViewController.h */,
 				1CC545E01C2256DF00200870 /* DaiLive2DViewController.mm */,
 			);
 			path = DaiLive2DViewController;
+			sourceTree = "<group>";
+		};
+		1CD60DD01C23DB29002ABB0E /* Live2DInfoLoader */ = {
+			isa = PBXGroup;
+			children = (
+				1CD60DD11C23DB4A002ABB0E /* Live2DInfoLoader.h */,
+				1CD60DD21C23DB4A002ABB0E /* Live2DInfoLoader.m */,
+				01FFBD031C24558B0039A5A7 /* Live2DParameter.h */,
+				01FFBD041C24558B0039A5A7 /* Live2DParameter.m */,
+			);
+			path = Live2DInfoLoader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,7 +224,9 @@
 				1C471AA11C215D2A0050FAFB /* AppDelegate.mm in Sources */,
 				1C471AB71C215DD90050FAFB /* MainViewController.m in Sources */,
 				1C471A9E1C215D2A0050FAFB /* main.m in Sources */,
+				01FFBD051C24558B0039A5A7 /* Live2DParameter.m in Sources */,
 				1CC545E11C2256DF00200870 /* DaiLive2DViewController.mm in Sources */,
+				1CD60DD31C23DB4A002ABB0E /* Live2DInfoLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

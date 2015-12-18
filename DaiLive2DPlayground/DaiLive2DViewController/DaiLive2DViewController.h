@@ -7,7 +7,12 @@
 //
 
 #import <GLKit/GLKit.h>
+#import "Live2DInfoLoader.h"
 
 @interface DaiLive2DViewController : GLKViewController
+
+@property (nonatomic, readonly) Live2DInfoLoader *loader;
+
+- (id)initFromBundlePath:(NSString *)path;
 
 @end

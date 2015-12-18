@@ -23,7 +23,7 @@
     [super viewDidLoad];
     
     // 建置 live2d model 畫面
-    self.live2DViewController = [DaiLive2DViewController new];
+    self.live2DViewController = [[DaiLive2DViewController alloc] initFromBundlePath:@"/Haru/model.plist"];
     CGRect newFrame = self.view.bounds;
     newFrame.origin.y += 150;
     self.live2DViewController.view.frame = newFrame;
