@@ -1,0 +1,111 @@
+// 頭部左右旋轉
+PARAM_ANGLE_X
+-30.0 ~ 30.0
+
+// 上下點頭
+PARAM_ANGLE_Y
+-30.0 ~ 30.0
+
+// 左右搖頭晃腦
+PARAM_ANGLE_Z
+-30.0 ~ 30.0
+
+// 左眼開啟大小程度
+PARAM_EYE_L_OPEN
+0.0 ~ 2.0
+
+// 右眼開啟大小程度
+PARAM_EYE_R_OPEN
+0.0 ~ 2.0
+
+// 左眼微笑程度
+PARAM_EYE_L_SMILE
+0.0 ~ 1.0
+
+// 右眼微笑程度
+PARAM_EYE_R_SMILE
+0.0 ~ 1.0
+
+// 眼睛的樣子, -1.0 看起來比較兇, 1.0 看起來比較楚楚可憐
+PARAM_EYE_FORM
+-1.0 ~ 1.0
+
+// 眼球看左看右
+PARAM_EYE_BALL_X
+-1.0 ~ 1.0
+
+// 眼球看上看下
+PARAM_EYE_BALL_Y
+-1.0 ~ 1.0
+
+// 眼球大小
+PARAM_EYE_BALL_FORM
+-1.0 ~ 0.0
+
+// 左邊眉毛的高低
+PARAM_BROW_L_Y
+-1.0 ~ 1.0
+
+// 右邊眉毛的高低
+PARAM_BROW_R_Y
+-1.0 ~ 1.0
+
+// 左邊眉毛的前高後低, 或是後高前低
+PARAM_BROW_L_X
+-1.0 ~ 1.0
+
+// 右邊眉毛的前高後低, 或是後高前低
+PARAM_BROW_R_X
+-1.0 ~ 1.0
+
+// 左邊眉毛加強版的前高後低, 後高前低
+PARAM_BROW_L_ANGLE
+-1.0 ~ 1.0
+
+// 右邊眉毛加強版的前高後低, 後高前低
+PARAM_BROW_R_ANGLE
+-1.0 ~ 1.0
+
+// 左邊眉毛生氣或是高興
+PARAM_BROW_L_FORM
+-1.0 ~ 1.0
+
+// 右邊眉毛生氣或是高興
+PARAM_BROW_R_FORM
+-1.0 ~ 1.0
+
+// 微笑或是凹凹嘴
+PARAM_MOUTH_FORM
+-1.0 ~ 1.0
+
+// 嘴巴打開或是關閉
+PARAM_MOUTH_OPEN_Y
+0.0 ~ 1.0
+
+// 臉頰紅暈
+PARAM_TERE
+0.0 ~ 1.0
+
+// 身體中心朝向的方向
+PARAM_BODY_ANGLE_X
+-10.0 ~ 10.0
+
+// 身體上下起伏
+PARAM_BODY_ANGLE_Y
+-10.0 ~ 10.0
+
+// 身體左右搖擺
+PARAM_BODY_ANGLE_Z
+-10.0 ~ 10.0
+
+// 呼吸起伏
+PARAM_BREATH
+0.0 ~ 1.0
+
+// 左手動作
+PARAM_ARM_L_A
+-1.0 ~ 1.0
+
+// 右手動作
+PARAM_ARM_R_A
+-1.0 ~ 1.0
