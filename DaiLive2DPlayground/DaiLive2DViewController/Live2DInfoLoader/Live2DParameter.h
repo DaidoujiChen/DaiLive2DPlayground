@@ -7,17 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Live2DParameterValue.h"
 
-@interface Live2DParameterValue : NSObject
+@protocol Live2DParameterDelegate;
 
-@property (nonatomic, readonly) double max;
-@property (nonatomic, readonly) double min;
+// 中間介層, 方便直接由 key 直存取變數
+@interface Live2DParameter : NSObject <Live2DParameterValueDelegate>
+
+@property (nonatomic, weak) id <Live2DParameterDelegate> delegate;
+
+- (Live2DParameterValue *)objectForKeyedSubscript:(NSString *)parameter;
 
 @end
 
-@interface Live2DParameter : NSObject
+@protocol Live2DParameterDelegate <NSObject>
 
-- (id)initWithInfo:(NSDictionary *)info;
-- (Live2DParameterValue *)objectForKeyedSubscript:(NSString *)key;
+- (NSDictionary *)infoForParameter:(NSString *)parameter;
+- (void)setValue:(double)value forParameter:(NSString *)parameter;
+- (double)valueForParameter:(NSString *)parameter;
 
 @end

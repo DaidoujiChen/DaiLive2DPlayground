@@ -9,14 +9,12 @@
 #import <GLKit/GLKit.h>
 #import "Live2DInfoLoader.h"
 
-@interface DaiLive2DViewController : GLKViewController
+@interface DaiLive2DViewController : GLKViewController <Live2DInfoLoaderDelegate>
 
 @property (nonatomic, readonly) Live2DInfoLoader *loader;
 @property (nonatomic, assign) CGFloat scale;
 @property (nonatomic, assign) CGPoint position;
 
 - (id)initFromBundlePath:(NSString *)path;
-- (double)valueForParameter:(NSString *)parameter;
-- (void)setValue:(double)value forParameter:(NSString *)parameter;
 
 @end

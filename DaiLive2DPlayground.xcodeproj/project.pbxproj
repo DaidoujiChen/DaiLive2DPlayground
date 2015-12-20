@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		017AA12B1C26EC2C0068D1FF /* Live2DParameterValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 017AA12A1C26EC2C0068D1FF /* Live2DParameterValue.m */; };
 		01FFBD051C24558B0039A5A7 /* Live2DParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FFBD041C24558B0039A5A7 /* Live2DParameter.m */; };
 		1C471A9E1C215D2A0050FAFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C471A9D1C215D2A0050FAFB /* main.m */; };
 		1C471AA11C215D2A0050FAFB /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1C471AA01C215D2A0050FAFB /* AppDelegate.mm */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		017AA1291C26EC2C0068D1FF /* Live2DParameterValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Live2DParameterValue.h; sourceTree = "<group>"; };
+		017AA12A1C26EC2C0068D1FF /* Live2DParameterValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Live2DParameterValue.m; sourceTree = "<group>"; };
 		01FFBD031C24558B0039A5A7 /* Live2DParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Live2DParameter.h; sourceTree = "<group>"; };
 		01FFBD041C24558B0039A5A7 /* Live2DParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Live2DParameter.m; sourceTree = "<group>"; };
 		1C471A991C215D2A0050FAFB /* DaiLive2DPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaiLive2DPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +148,8 @@
 				1CD60DD21C23DB4A002ABB0E /* Live2DInfoLoader.m */,
 				01FFBD031C24558B0039A5A7 /* Live2DParameter.h */,
 				01FFBD041C24558B0039A5A7 /* Live2DParameter.m */,
+				017AA1291C26EC2C0068D1FF /* Live2DParameterValue.h */,
+				017AA12A1C26EC2C0068D1FF /* Live2DParameterValue.m */,
 			);
 			path = Live2DInfoLoader;
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 			files = (
 				1C471AA11C215D2A0050FAFB /* AppDelegate.mm in Sources */,
 				1C471AB71C215DD90050FAFB /* MainViewController.m in Sources */,
+				017AA12B1C26EC2C0068D1FF /* Live2DParameterValue.m in Sources */,
 				1C471A9E1C215D2A0050FAFB /* main.m in Sources */,
 				01FFBD051C24558B0039A5A7 /* Live2DParameter.m in Sources */,
 				1CC545E11C2256DF00200870 /* DaiLive2DViewController.mm in Sources */,

@@ -28,6 +28,16 @@ using namespace live2d;
 
 @implementation DaiLive2DViewController
 
+#pragma mark - Live2DInfoLoaderDelegate
+
+- (void)setValue:(double)value forParameter:(NSString *)parameter {
+    self.live2DModel->setParamFloat(parameter.UTF8String, value);
+}
+
+- (double)valueForParameter:(NSString *)parameter {
+    return self.live2DModel->getParamFloat(parameter.UTF8String);
+}
+
 #pragma mark - GLKViewDelegate
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {
@@ -47,12 +57,12 @@ using namespace live2d;
     
     l2d_int64 time = UtSystem::getUserTimeMSec();
     double globalTime = time / 1000.0;
-    self.live2DModel->setParamFloat("PARAM_ANGLE_Z", 30.0 * sin(globalTime));
-    self.live2DModel->setParamFloat("PARAM_BODY_ANGLE_Z", 10.0 * sin(globalTime));
-    self.live2DModel->setParamFloat("PARAM_HAIR_FRONT", sin(globalTime));
-    self.live2DModel->setParamFloat("PARAM_HAIR_BACK", sin(globalTime));
-    self.live2DModel->setParamFloat("PARAM_BREATH", (cos(globalTime) + 1.0) / 2.0);
-    self.live2DModel->setParamFloat("PARAM_BUST_Y", cos(globalTime));
+    self.loader.parameter[@"PARAM_ANGLE_Z"].value = 30.0 * sin(globalTime);
+    self.loader.parameter[@"PARAM_BODY_ANGLE_Z"].value = 10.0 * sin(globalTime);
+    self.loader.parameter[@"PARAM_HAIR_FRONT"].value = sin(globalTime);
+    self.loader.parameter[@"PARAM_HAIR_BACK"].value = sin(globalTime);
+    self.loader.parameter[@"PARAM_BREATH"].value = (cos(globalTime) + 1.0) / 2.0;
+    self.loader.parameter[@"PARAM_BUST_Y"].value = cos(globalTime);
     
     if ((sin(globalTime) + 1.0) >= 1.9 && !self.isEyeClosing) {
         self.isEyeClosing = YES;
@@ -60,8 +70,8 @@ using namespace live2d;
     }
     else if (self.isEyeClosing) {
         double eyeTime = time / self.eyeSpeed;
-        self.live2DModel->setParamFloat("PARAM_EYE_L_OPEN", sin(eyeTime) + 1.0);
-        self.live2DModel->setParamFloat("PARAM_EYE_R_OPEN", sin(eyeTime) + 1.0);
+        self.loader.parameter[@"PARAM_EYE_L_OPEN"].value = sin(eyeTime) + 1.0;
+        self.loader.parameter[@"PARAM_EYE_R_OPEN"].value = sin(eyeTime) + 1.0;
         if ((sin(eyeTime) + 1.0) >= 1.9) {
             self.isEyeClosing = NO;
         }
@@ -70,8 +80,6 @@ using namespace live2d;
     self.live2DModel->update();
     self.live2DModel->draw();
 }
-
-
 
 #pragma mark - private instance method
 
@@ -96,22 +104,12 @@ using namespace live2d;
         int glTexNo = textureInfo.name;
         self.live2DModel->setTexture(index, glTexNo);
     }
-
-    self.live2DModel->setParamFloat("PARAM_EYE_L_SMILE", 1.0);
-    self.live2DModel->setParamFloat("PARAM_EYE_R_SMILE", 1.0);
-    self.live2DModel->setParamFloat("PARAM_ARM_L_A", -1.0);
-    self.live2DModel->setParamFloat("PARAM_ARM_R_A", -1.0);
+    
+    self.loader.parameter[@"PARAM_EYE_L_SMILE"].value = 1.0;
+    self.loader.parameter[@"PARAM_EYE_R_SMILE"].value = 1.0;
+    self.loader.parameter[@"PARAM_ARM_L_A"].value = -1.0;
+    self.loader.parameter[@"PARAM_ARM_R_A"].value = -1.0;
     self.isEyeClosing = NO;
-}
-
-#pragma mark - Instance Method
-
-- (double)valueForParameter:(NSString *)parameter {
-    return self.live2DModel->getParamFloat(parameter.UTF8String);
-}
-
-- (void)setValue:(double)value forParameter:(NSString *)parameter {
-    self.live2DModel->setParamFloat(parameter.UTF8String, value);
 }
 
 #pragma mark - Life Cycle
@@ -123,6 +121,7 @@ using namespace live2d;
         if (!self.loader) {
             return nil;
         }
+        self.loader.delegate = self;
     }
     return self;
 }

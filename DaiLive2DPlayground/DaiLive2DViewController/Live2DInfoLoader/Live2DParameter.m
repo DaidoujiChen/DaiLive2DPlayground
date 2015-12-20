@@ -7,45 +7,44 @@
 //
 
 #import "Live2DParameter.h"
-
-@interface Live2DParameterValue ()
-
-@property (nonatomic, assign) double max;
-@property (nonatomic, assign) double min;
-
-@end
-
-@implementation Live2DParameterValue
-
-- (id)initWithMax:(double)max andMin:(double)min {
-    self = [super init];
-    if (self) {
-        self.max = max;
-        self.min = min;
-    }
-    return self;
-}
-
-@end
-
-@interface Live2DParameter ()
-
-@property (nonatomic, strong) NSDictionary *parameters;
-
-@end
+#import <objc/runtime.h>
 
 @implementation Live2DParameter
 
-- (id)initWithInfo:(NSDictionary *)info {
-    self = [super init];
-    if (self) {
-        self.parameters = info;
-    }
-    return self;
+#pragma mark - Private Class Method
+
+// 快取調用過的值
++ (Live2DParameterValue *)cacheForParameterValue:(NSString *)parameter {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSMutableDictionary *cacheTable = [NSMutableDictionary dictionary];
+        objc_setAssociatedObject(self, _cmd, cacheTable, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    });
+    return objc_getAssociatedObject(self, _cmd)[parameter];
 }
 
-- (Live2DParameterValue *)objectForKeyedSubscript:(NSString *)key {
-    return [[Live2DParameterValue alloc] initWithMax:[self.parameters[key][@"Max"] doubleValue] andMin:[self.parameters[key][@"Min"] doubleValue]];
+#pragma mark - Live2DParameterValueDelegate
+
+// 改變 parameter 值
+- (void)setValue:(double)value forParameter:(NSString *)parameter {
+    [self.delegate setValue:value forParameter:parameter];
+}
+
+// 取得當前 parameter 值
+- (double)valueForParameter:(NSString *)parameter {
+    return [self.delegate valueForParameter:parameter];
+}
+
+#pragma mark - Custom Keyed Subscripting
+
+- (Live2DParameterValue *)objectForKeyedSubscript:(NSString *)parameter {
+    Live2DParameterValue *parameterValue = [Live2DParameter cacheForParameterValue:parameter];
+    if (!parameterValue) {
+        NSDictionary *info = [self.delegate infoForParameter:parameter];
+        parameterValue = [[Live2DParameterValue alloc] initWithParameter:parameter andMax:[info[@"Max"] doubleValue] andMin:[info[@"Min"] doubleValue]];
+        parameterValue.delegate = self;
+    }
+    return parameterValue;
 }
 
 @end

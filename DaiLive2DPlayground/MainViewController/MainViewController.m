@@ -41,19 +41,18 @@
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     NSString *selectedString = [pickerView.delegate pickerView:pickerView titleForRow:[pickerView selectedRowInComponent:0] forComponent:0];
     self.parameterTextField.text = selectedString;
-    self.valueSlider.enabled = YES;
-    self.valueSlider.minimumValue = self.live2DViewController.loader.parameter[selectedString].min * 100;
-    self.valueSlider.maximumValue = self.live2DViewController.loader.parameter[selectedString].max * 100;
-    self.valueSlider.value = [self.live2DViewController valueForParameter:selectedString] * 100;
+    [self enableSliderForParameter:selectedString];
 }
 
 #pragma mark - IBAction
 
 - (IBAction)onParameterValueChange:(UISlider *)slider {
-    [self.live2DViewController setValue:slider.value / 100 forParameter:self.parameterTextField.text];
+    self.live2DViewController.loader.parameter[self.parameterTextField.text].value = slider.value / 100;
 }
 
 #pragma mark - Private Instance Method
+
+#pragma mark * init
 
 - (void)setupInitValues {
     self.valueSlider.enabled = NO;
@@ -73,18 +72,6 @@
     self.parameterTextField.inputAccessoryView  = toolBar;
 }
 
-- (void)doneAction {
-    UIPickerView *pickerView = (UIPickerView *)self.parameterTextField.inputView;
-    NSString *finalSelectedString = [pickerView.delegate pickerView:pickerView titleForRow:[pickerView selectedRowInComponent:0] forComponent:0];
-    self.parameterTextField.text = finalSelectedString;
-    [self.parameterTextField resignFirstResponder];
-    
-    self.valueSlider.enabled = YES;
-    self.valueSlider.minimumValue = self.live2DViewController.loader.parameter[finalSelectedString].min * 100;
-    self.valueSlider.maximumValue = self.live2DViewController.loader.parameter[finalSelectedString].max * 100;
-    self.valueSlider.value = [self.live2DViewController valueForParameter:finalSelectedString] * 100;
-}
-
 - (void)setupLive2DModel {
     
     // 建置 live2d model 畫面
@@ -97,6 +84,26 @@
 - (void)setupGestures {
     UIPinchGestureRecognizer *pinchGestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(onPitch:)];
     [self.view addGestureRecognizer:pinchGestureRecognizer];
+}
+
+#pragma mark * Button Action
+
+- (void)doneAction {
+    UIPickerView *pickerView = (UIPickerView *)self.parameterTextField.inputView;
+    NSString *finalSelectedString = [pickerView.delegate pickerView:pickerView titleForRow:[pickerView selectedRowInComponent:0] forComponent:0];
+    self.parameterTextField.text = finalSelectedString;
+    [self.parameterTextField resignFirstResponder];
+    [self enableSliderForParameter:finalSelectedString];
+}
+
+#pragma mark * misc
+
+- (void)enableSliderForParameter:(NSString *)parameter {
+    self.valueSlider.enabled = YES;
+    self.valueSlider.minimumValue = self.live2DViewController.loader.parameter[parameter].min * 100;
+    self.valueSlider.maximumValue = self.live2DViewController.loader.parameter[parameter].max * 100;
+    self.valueSlider.value = self.live2DViewController.loader.parameter[parameter].value * 100;
+    
 }
 
 #pragma mark * Gestures
