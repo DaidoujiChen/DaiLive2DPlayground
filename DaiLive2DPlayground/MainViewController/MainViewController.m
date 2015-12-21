@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "HaruViewController.h"
+#import "WankoromochiViewController.h"
 
 @interface MainViewController ()
 
@@ -117,7 +118,7 @@
 - (void)setupLive2DModel {
     
     // 建置 live2d model 畫面
-    self.live2DViewController = [HaruViewController new];
+    self.live2DViewController = [WankoromochiViewController new];
     self.live2DViewController.view.frame = self.view.bounds;
     [self.view addSubview:self.live2DViewController.view];
     [self.view bringSubviewToFront:self.floatingView];

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		017AA12B1C26EC2C0068D1FF /* Live2DParameterValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 017AA12A1C26EC2C0068D1FF /* Live2DParameterValue.m */; };
 		01FFBD051C24558B0039A5A7 /* Live2DParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FFBD041C24558B0039A5A7 /* Live2DParameter.m */; };
+		1C02FDD11C27C2BA00427FE7 /* WankoromochiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C02FDD01C27C2BA00427FE7 /* WankoromochiViewController.m */; };
+		1C02FDD31C27C37400427FE7 /* Wankoromochi in Resources */ = {isa = PBXBuildFile; fileRef = 1C02FDD21C27C37400427FE7 /* Wankoromochi */; };
 		1C1D59D21C27AA0100C1B20D /* Live2DPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1D59D11C27AA0100C1B20D /* Live2DPart.m */; };
 		1C1D59D51C27AA3100C1B20D /* Live2DPartValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1D59D41C27AA3100C1B20D /* Live2DPartValue.m */; };
 		1C471A9E1C215D2A0050FAFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C471A9D1C215D2A0050FAFB /* main.m */; };
@@ -31,6 +33,9 @@
 		017AA12A1C26EC2C0068D1FF /* Live2DParameterValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Live2DParameterValue.m; sourceTree = "<group>"; };
 		01FFBD031C24558B0039A5A7 /* Live2DParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Live2DParameter.h; sourceTree = "<group>"; };
 		01FFBD041C24558B0039A5A7 /* Live2DParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Live2DParameter.m; sourceTree = "<group>"; };
+		1C02FDCF1C27C2BA00427FE7 /* WankoromochiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WankoromochiViewController.h; sourceTree = "<group>"; };
+		1C02FDD01C27C2BA00427FE7 /* WankoromochiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WankoromochiViewController.m; sourceTree = "<group>"; };
+		1C02FDD21C27C37400427FE7 /* Wankoromochi */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Wankoromochi; sourceTree = "<group>"; };
 		1C1D59D01C27AA0100C1B20D /* Live2DPart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Live2DPart.h; sourceTree = "<group>"; };
 		1C1D59D11C27AA0100C1B20D /* Live2DPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Live2DPart.m; sourceTree = "<group>"; };
 		1C1D59D31C27AA3100C1B20D /* Live2DPartValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Live2DPartValue.h; sourceTree = "<group>"; };
@@ -71,6 +76,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C02FDCE1C27C2A800427FE7 /* WankoromochiViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1C02FDCF1C27C2BA00427FE7 /* WankoromochiViewController.h */,
+				1C02FDD01C27C2BA00427FE7 /* WankoromochiViewController.m */,
+			);
+			path = WankoromochiViewController;
+			sourceTree = "<group>";
+		};
 		1C471A901C215D2A0050FAFB = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +106,7 @@
 			children = (
 				1CC545DE1C2256C700200870 /* DaiLive2DViewController */,
 				1C5DE0C91C27B26900BD656F /* HaruViewController */,
+				1C02FDCE1C27C2A800427FE7 /* WankoromochiViewController */,
 				1C471A9F1C215D2A0050FAFB /* AppDelegate.h */,
 				1C471AA01C215D2A0050FAFB /* AppDelegate.mm */,
 				1C471AB31C215DB20050FAFB /* MainViewController */,
@@ -136,6 +151,7 @@
 		1C471B5D1C2166BE0050FAFB /* Live2DResource */ = {
 			isa = PBXGroup;
 			children = (
+				1C02FDD21C27C37400427FE7 /* Wankoromochi */,
 				1C7603D21C22B3AA00B315F3 /* Haru */,
 			);
 			path = Live2DResource;
@@ -238,6 +254,7 @@
 				1C7603D31C22B3AA00B315F3 /* Haru in Resources */,
 				1C471ABA1C215EB40050FAFB /* Launch Screen.storyboard in Resources */,
 				1C471AA91C215D2A0050FAFB /* Assets.xcassets in Resources */,
+				1C02FDD31C27C37400427FE7 /* Wankoromochi in Resources */,
 				1C471AB81C215DD90050FAFB /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +272,7 @@
 				1C471A9E1C215D2A0050FAFB /* main.m in Sources */,
 				1C1D59D21C27AA0100C1B20D /* Live2DPart.m in Sources */,
 				01FFBD051C24558B0039A5A7 /* Live2DParameter.m in Sources */,
+				1C02FDD11C27C2BA00427FE7 /* WankoromochiViewController.m in Sources */,
 				1CC545E11C2256DF00200870 /* DaiLive2DViewController.mm in Sources */,
 				1CD60DD31C23DB4A002ABB0E /* Live2DInfoLoader.m in Sources */,
 				1C5DE0CC1C27B29200BD656F /* HaruViewController.m in Sources */,
