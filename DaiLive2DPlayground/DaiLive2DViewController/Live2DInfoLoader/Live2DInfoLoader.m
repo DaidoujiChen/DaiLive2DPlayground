@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong) NSString *basePath;
 @property (nonatomic, readonly) NSString *bundlePath;
-@property (nonatomic, strong) NSDictionary *ModelInfo;
+@property (nonatomic, strong) NSDictionary *modelInfo;
 
 @end
 
@@ -34,7 +34,7 @@
 
 // 回傳該 parameter 的預設最大最小值資訊
 - (NSDictionary *)infoForParameter:(NSString *)parameter {
-    return self.ModelInfo[@"ModelParam"][parameter];
+    return self.modelInfo[@"ModelParam"][parameter];
 }
 
 // 改變 parameter 值
@@ -51,13 +51,13 @@
 
 // model 名稱
 - (NSString *)model {
-    return [self.basePath stringByAppendingPathComponent:self.ModelInfo[@"ModelName"]];
+    return [self.basePath stringByAppendingPathComponent:self.modelInfo[@"ModelName"]];
 }
 
 // model 的 材質
 - (NSArray<NSString *> *)textures {
     NSMutableArray *textures = [NSMutableArray array];
-    for (NSString *texture in self.ModelInfo[@"ModelTextures"]) {
+    for (NSString *texture in self.modelInfo[@"ModelTextures"]) {
         [textures addObject:[self.basePath stringByAppendingPathComponent:texture]];
     }
     return textures;
@@ -65,7 +65,7 @@
 
 // model 所包含的可控變數
 - (NSArray<NSString *> *)parameters {
-    NSDictionary *modelParam = self.ModelInfo[@"ModelParam"];
+    NSDictionary *modelParam = self.modelInfo[@"ModelParam"];
     return [modelParam.allKeys sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
         return [obj1 compare:obj2];
     }];
@@ -80,7 +80,7 @@
 
 // model 所包含的可顯示部位
 - (NSArray<NSString *> *)parts {
-    NSArray *modelPart = self.ModelInfo[@"ModelPart"];
+    NSArray *modelPart = self.modelInfo[@"ModelPart"];
     return [modelPart sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
         return [obj1 compare:obj2];
     }];
@@ -113,8 +113,8 @@
     if (self) {
         NSString *lastPathComponent = path.lastPathComponent;
         self.basePath = [self.bundlePath stringByAppendingString:[path stringByReplacingOccurrencesOfString:lastPathComponent withString:@""]];
-        self.ModelInfo = [self dictionaryFromPlistBundlePath:path];
-        if (!self.ModelInfo) {
+        self.modelInfo = [self dictionaryFromPlistBundlePath:path];
+        if (!self.modelInfo) {
             return nil;
         }
     }
