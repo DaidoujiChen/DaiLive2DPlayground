@@ -17,4 +17,8 @@
 
 - (id)initFromBundlePath:(NSString *)path;
 
+// Method Need To Override
+- (void)defaultModelSetting:(Live2DInfoLoader *)loader;
+- (void)animateModelSetting:(Live2DInfoLoader *)loader onTime:(UInt64)time;
+
 @end

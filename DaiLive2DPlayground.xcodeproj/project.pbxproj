@@ -20,6 +20,7 @@
 		1C471B5A1C2166500050FAFB /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C471B581C2166500050FAFB /* GLKit.framework */; };
 		1C471B5B1C2166500050FAFB /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C471B591C2166500050FAFB /* OpenGLES.framework */; };
 		1C471C481C217DCB0050FAFB /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C471C471C217DCB0050FAFB /* CoreMotion.framework */; };
+		1C5DE0CC1C27B29200BD656F /* HaruViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5DE0CB1C27B29200BD656F /* HaruViewController.m */; };
 		1C7603D31C22B3AA00B315F3 /* Haru in Resources */ = {isa = PBXBuildFile; fileRef = 1C7603D21C22B3AA00B315F3 /* Haru */; };
 		1CC545E11C2256DF00200870 /* DaiLive2DViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1CC545E01C2256DF00200870 /* DaiLive2DViewController.mm */; };
 		1CD60DD31C23DB4A002ABB0E /* Live2DInfoLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD60DD21C23DB4A002ABB0E /* Live2DInfoLoader.m */; };
@@ -47,6 +48,8 @@
 		1C471B581C2166500050FAFB /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		1C471B591C2166500050FAFB /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		1C471C471C217DCB0050FAFB /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		1C5DE0CA1C27B29200BD656F /* HaruViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HaruViewController.h; sourceTree = "<group>"; };
+		1C5DE0CB1C27B29200BD656F /* HaruViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HaruViewController.m; sourceTree = "<group>"; };
 		1C7603D21C22B3AA00B315F3 /* Haru */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Haru; sourceTree = "<group>"; };
 		1CC545DF1C2256DF00200870 /* DaiLive2DViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaiLive2DViewController.h; sourceTree = "<group>"; };
 		1CC545E01C2256DF00200870 /* DaiLive2DViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DaiLive2DViewController.mm; sourceTree = "<group>"; };
@@ -88,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				1CC545DE1C2256C700200870 /* DaiLive2DViewController */,
+				1C5DE0C91C27B26900BD656F /* HaruViewController */,
 				1C471A9F1C215D2A0050FAFB /* AppDelegate.h */,
 				1C471AA01C215D2A0050FAFB /* AppDelegate.mm */,
 				1C471AB31C215DB20050FAFB /* MainViewController */,
@@ -135,6 +139,15 @@
 				1C7603D21C22B3AA00B315F3 /* Haru */,
 			);
 			path = Live2DResource;
+			sourceTree = "<group>";
+		};
+		1C5DE0C91C27B26900BD656F /* HaruViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1C5DE0CA1C27B29200BD656F /* HaruViewController.h */,
+				1C5DE0CB1C27B29200BD656F /* HaruViewController.m */,
+			);
+			path = HaruViewController;
 			sourceTree = "<group>";
 		};
 		1CC545DE1C2256C700200870 /* DaiLive2DViewController */ = {
@@ -244,6 +257,7 @@
 				01FFBD051C24558B0039A5A7 /* Live2DParameter.m in Sources */,
 				1CC545E11C2256DF00200870 /* DaiLive2DViewController.mm in Sources */,
 				1CD60DD31C23DB4A002ABB0E /* Live2DInfoLoader.m in Sources */,
+				1C5DE0CC1C27B29200BD656F /* HaruViewController.m in Sources */,
 				1C1D59D51C27AA3100C1B20D /* Live2DPartValue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

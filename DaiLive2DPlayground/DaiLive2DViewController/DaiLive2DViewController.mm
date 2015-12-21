@@ -21,9 +21,6 @@ using namespace live2d;
 @property (nonatomic, strong) EAGLContext *context;
 @property (nonatomic) Live2DModelIPhone *live2DModel;
 
-@property (nonatomic, assign) BOOL isEyeClosing;
-@property (nonatomic, assign) double eyeSpeed;
-
 @end
 
 @implementation DaiLive2DViewController
@@ -63,27 +60,7 @@ using namespace live2d;
     double top = self.position.y - value;
     glOrthof(left, right, bottom, top, 0.5, -0.5);
     
-    l2d_int64 time = UtSystem::getUserTimeMSec();
-    double globalTime = time / 1000.0;
-    self.loader.parameter[@"PARAM_ANGLE_Z"].value = 30.0 * sin(globalTime);
-    self.loader.parameter[@"PARAM_BODY_ANGLE_Z"].value = 10.0 * sin(globalTime);
-    self.loader.parameter[@"PARAM_HAIR_FRONT"].value = sin(globalTime);
-    self.loader.parameter[@"PARAM_HAIR_BACK"].value = sin(globalTime);
-    self.loader.parameter[@"PARAM_BREATH"].value = (cos(globalTime) + 1.0) / 2.0;
-    self.loader.parameter[@"PARAM_BUST_Y"].value = cos(globalTime);
-    
-    if ((sin(globalTime) + 1.0) >= 1.9 && !self.isEyeClosing) {
-        self.isEyeClosing = YES;
-        self.eyeSpeed = (arc4random() % 200 + 100);
-    }
-    else if (self.isEyeClosing) {
-        double eyeTime = time / self.eyeSpeed;
-        self.loader.parameter[@"PARAM_EYE_L_OPEN"].value = sin(eyeTime) + 1.0;
-        self.loader.parameter[@"PARAM_EYE_R_OPEN"].value = sin(eyeTime) + 1.0;
-        if ((sin(eyeTime) + 1.0) >= 1.9) {
-            self.isEyeClosing = NO;
-        }
-    }
+    [self animateModelSetting:self.loader onTime:UtSystem::getUserTimeMSec()];
     
     self.live2DModel->update();
     self.live2DModel->draw();
@@ -105,19 +82,23 @@ using namespace live2d;
 
 - (void)setupModel {
     self.live2DModel = Live2DModelIPhone::loadModel(self.loader.model.UTF8String);
-    
     for (int index = 0; index < self.loader.textures.count; index++) {
         NSString *texturePath = self.loader.textures[index];
         GLKTextureInfo *textureInfo = [GLKTextureLoader textureWithContentsOfFile:texturePath options:@{ GLKTextureLoaderApplyPremultiplication: @(YES), GLKTextureLoaderGenerateMipmaps: @(YES) } error:nil];
         int glTexNo = textureInfo.name;
         self.live2DModel->setTexture(index, glTexNo);
     }
-    
-    self.loader.parameter[@"PARAM_EYE_L_SMILE"].value = 1.0;
-    self.loader.parameter[@"PARAM_EYE_R_SMILE"].value = 1.0;
-    self.loader.parameter[@"PARAM_ARM_L_A"].value = -1.0;
-    self.loader.parameter[@"PARAM_ARM_R_A"].value = -1.0;
-    self.isEyeClosing = NO;
+    [self defaultModelSetting:self.loader];
+}
+
+#pragma mark - Method Need To Override
+
+- (void)defaultModelSetting:(Live2DInfoLoader *)loader {
+    NSAssert(0, @"必須重寫此 Method");
+}
+
+- (void)animateModelSetting:(Live2DInfoLoader *)loader onTime:(UInt64)time {
+    NSAssert(0, @"必須重寫此 Method");
 }
 
 #pragma mark - Life Cycle
@@ -152,6 +133,10 @@ using namespace live2d;
     view.drawableDepthFormat = GLKViewDrawableDepthFormat24;
     [self setupGL];
     [self setupModel];
+}
+
+- (void)dealloc {
+    [self tearDownGL];
 }
 
 @end
