@@ -17,11 +17,14 @@
 @property (weak, nonatomic) IBOutlet UITextField *partTextField;
 @property (weak, nonatomic) IBOutlet UISlider *valueSlider;
 @property (weak, nonatomic) IBOutlet UISwitch *partSwitch;
+@property (weak, nonatomic) IBOutlet UIView *movingView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *floatingViewToTop;
 
 @property (nonatomic, weak) UIPickerView *parameterPicker;
 @property (nonatomic, weak) UIPickerView *partPicker;
 @property (nonatomic, strong) DaiLive2DViewController *live2DViewController;
 @property (nonatomic, assign) CGFloat previousScale;
+@property (nonatomic, assign) BOOL isTouchOnMovingView;
 
 @end
 
@@ -118,7 +121,7 @@
 - (void)setupLive2DModel {
     
     // 建置 live2d model 畫面
-    self.live2DViewController = [WankoromochiViewController new];
+    self.live2DViewController = [HaruViewController new];
     self.live2DViewController.view.frame = self.view.bounds;
     [self.view addSubview:self.live2DViewController.view];
     [self.view bringSubviewToFront:self.floatingView];
@@ -181,6 +184,13 @@
 
 #pragma mark - Touch Events
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = touches.anyObject;
+    if (touch.view == self.movingView) {
+        self.isTouchOnMovingView = YES;
+    }
+}
+
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     UITouch *touch = touches.anyObject;
     CGPoint location = [touch locationInView:self.view];
@@ -188,10 +198,24 @@
     float deltaX = location.x - previousLocation.x;
     float deltaY = location.y - previousLocation.y;
     
-    CGPoint newPosition = self.live2DViewController.position;
-    newPosition.x -= deltaX * 5;
-    newPosition.y -= deltaY * 5;
-    self.live2DViewController.position = newPosition;
+    if (self.isTouchOnMovingView) {
+        self.floatingViewToTop.constant += deltaY;
+        [self.floatingView layoutIfNeeded];
+    }
+    else {
+        CGPoint newPosition = self.live2DViewController.position;
+        newPosition.x -= deltaX * 5;
+        newPosition.y -= deltaY * 5;
+        self.live2DViewController.position = newPosition;
+    }
+}
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    self.isTouchOnMovingView = NO;
+}
+
+- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    self.isTouchOnMovingView = NO;
 }
 
 #pragma mark - Life Cycle

@@ -7,6 +7,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
             <connections>
                 <outlet property="floatingView" destination="dsp-gp-OpY" id="Mxj-GV-x2w"/>
+                <outlet property="floatingViewToTop" destination="qM7-0X-ZNd" id="Hac-4T-MQg"/>
+                <outlet property="movingView" destination="MP8-0j-fBf" id="h0w-kN-j2v"/>
                 <outlet property="parameterTextField" destination="ZYH-SU-Tzk" id="Y9f-9O-0Z4"/>
                 <outlet property="partSwitch" destination="opf-72-0AK" id="gHK-wd-lms"/>
                 <outlet property="partTextField" destination="8Gh-x6-bGX" id="7UN-bR-Dt8"/>
