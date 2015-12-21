@@ -18,6 +18,18 @@
 
 @implementation Live2DInfoLoader
 
+#pragma mark - Live2DPartDelegate
+
+// 改變 part 值
+- (void)setValue:(double)value forPart:(NSString *)part {
+    [self.delegate setValue:value forPart:part];
+}
+
+// 取得當前 part 值
+- (double)valueForPart:(NSString *)part {
+    return [self.delegate valueForPart:part];
+}
+
 #pragma mark - Live2DParameterDelegate
 
 // 回傳該 parameter 的預設最大最小值資訊
@@ -64,6 +76,21 @@
     Live2DParameter *parameter = [Live2DParameter new];
     parameter.delegate = self;
     return parameter;
+}
+
+// model 所包含的可顯示部位
+- (NSArray<NSString *> *)parts {
+    NSArray *modelPart = self.ModelInfo[@"ModelPart"];
+    return [modelPart sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        return [obj1 compare:obj2];
+    }];
+}
+
+// 操作該部位
+- (Live2DPart *)part {
+    Live2DPart *part = [Live2DPart new];
+    part.delegate = self;
+    return part;
 }
 
 #pragma mark - Private Instance Method

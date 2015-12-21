@@ -3,12 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>ModelName</key>
-	<string>haru.moc</string>
+	<string>Haru.moc</string>
 	<key>ModelTextures</key>
 	<array>
-		<string>haru.1024/texture_00.png</string>
-		<string>haru.1024/texture_01.png</string>
-		<string>haru.1024/texture_02.png</string>
+		<string>Haru.1024/texture_00.png</string>
+		<string>Haru.1024/texture_01.png</string>
+		<string>Haru.1024/texture_02.png</string>
 	</array>
 	<key>ModelParam</key>
 	<dict>
@@ -208,6 +208,42 @@
 			<key>Max</key>
 			<integer>1</integer>
 		</dict>
+		<key>PARAM_ARM_L_B</key>
+		<dict>
+			<key>Min</key>
+			<integer>-1</integer>
+			<key>Max</key>
+			<integer>1</integer>
+		</dict>
+		<key>PARAM_ARM_R_B</key>
+		<dict>
+			<key>Min</key>
+			<integer>-1</integer>
+			<key>Max</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
+	<key>ModelPart</key>
+	<array>
+		<string>ROUGH</string>
+		<string>PARTS_01_CORE</string>
+		<string>PARTS_01_HOHO_001</string>
+		<string>PARTS_01_FACE_001</string>
+		<string>PARTS_01_EYE_001</string>
+		<string>PARTS_01_EYE_BALL_001</string>
+		<string>PARTS_01_BROW_001</string>
+		<string>PARTS_01_MOUTH_001</string>
+		<string>PARTS_01_NOSE_001</string>
+		<string>PARTS_01_EAR_001</string>
+		<string>PARTS_01_HAIR_FRONT_001</string>
+		<string>PARTS_01_HAIR_SIDE_001</string>
+		<string>PARTS_01_HAIR_BACK_001</string>
+		<string>PARTS_01_NECK_001</string>
+		<string>PARTS_01_BODY_001</string>
+		<string>PARTS_01_ARM_L_A_001</string>
+		<string>PARTS_01_ARM_R_A_001</string>
+		<string>PARTS_01_ARM_L_B_001</string>
+		<string>PARTS_01_ARM_R_B_001</string>
+	</array>
 </dict>
 </plist>

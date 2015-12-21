@@ -13,8 +13,12 @@
 
 @property (weak, nonatomic) IBOutlet UIView *floatingView;
 @property (weak, nonatomic) IBOutlet UITextField *parameterTextField;
+@property (weak, nonatomic) IBOutlet UITextField *partTextField;
 @property (weak, nonatomic) IBOutlet UISlider *valueSlider;
+@property (weak, nonatomic) IBOutlet UISwitch *partSwitch;
 
+@property (nonatomic, weak) UIPickerView *parameterPicker;
+@property (nonatomic, weak) UIPickerView *partPicker;
 @property (nonatomic, strong) DaiLive2DViewController *live2DViewController;
 @property (nonatomic, assign) CGFloat previousScale;
 
@@ -29,19 +33,36 @@
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    return self.live2DViewController.loader.parameters.count;
+    if (pickerView == self.parameterPicker) {
+        return self.live2DViewController.loader.parameters.count;
+    }
+    else {
+        return self.live2DViewController.loader.parts.count;
+    }
 }
 
 #pragma mark - UIPickerViewDelegate
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    return self.live2DViewController.loader.parameters[row];
+    if (pickerView == self.parameterPicker) {
+        return self.live2DViewController.loader.parameters[row];
+    }
+    else {
+        return self.live2DViewController.loader.parts[row];
+    }
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    NSString *selectedString = [pickerView.delegate pickerView:pickerView titleForRow:[pickerView selectedRowInComponent:0] forComponent:0];
-    self.parameterTextField.text = selectedString;
-    [self enableSliderForParameter:selectedString];
+    if (pickerView == self.parameterPicker) {
+        NSString *selectedString = [pickerView.delegate pickerView:pickerView titleForRow:[pickerView selectedRowInComponent:0] forComponent:0];
+        self.parameterTextField.text = selectedString;
+        [self enableSliderForParameter:selectedString];
+    }
+    else {
+        NSString *selectedString = [pickerView.delegate pickerView:pickerView titleForRow:[pickerView selectedRowInComponent:0] forComponent:0];
+        self.partTextField.text = selectedString;
+        [self enableSwitchForPart:selectedString];
+    }
 }
 
 #pragma mark - IBAction
@@ -50,12 +71,17 @@
     self.live2DViewController.loader.parameter[self.parameterTextField.text].value = slider.value / 100;
 }
 
+- (IBAction)onPartValueChange:(UISwitch *)aSwitch {
+    self.live2DViewController.loader.part[self.partTextField.text].value = aSwitch.on;
+}
+
 #pragma mark - Private Instance Method
 
 #pragma mark * init
 
 - (void)setupInitValues {
     self.valueSlider.enabled = NO;
+    self.partSwitch.enabled = NO;
 }
 
 - (void)setupParameterTextField {
@@ -63,13 +89,29 @@
     parameterPicker.dataSource = self;
     parameterPicker.delegate = self;
     self.parameterTextField.inputView = parameterPicker;
+    self.parameterPicker = parameterPicker;
     
     UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneAction)];
+    UIBarButtonItem *parameterDoneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(parameterDoneAction)];
     UIToolbar *toolBar = [UIToolbar new];
-    toolBar.items = @[flexibleSpace, doneButton];
+    toolBar.items = @[flexibleSpace, parameterDoneButton];
     [toolBar sizeToFit];
-    self.parameterTextField.inputAccessoryView  = toolBar;
+    self.parameterTextField.inputAccessoryView = toolBar;
+}
+
+- (void)setupPartTextField {
+    UIPickerView *partPicker = [UIPickerView new];
+    partPicker.dataSource = self;
+    partPicker.delegate = self;
+    self.partTextField.inputView = partPicker;
+    self.partPicker = partPicker;
+    
+    UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem *partDoneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(partDoneAction)];
+    UIToolbar *toolBar = [UIToolbar new];
+    toolBar.items = @[flexibleSpace, partDoneButton];
+    [toolBar sizeToFit];
+    self.partTextField.inputAccessoryView = toolBar;
 }
 
 - (void)setupLive2DModel {
@@ -88,12 +130,20 @@
 
 #pragma mark * Button Action
 
-- (void)doneAction {
+- (void)parameterDoneAction {
     UIPickerView *pickerView = (UIPickerView *)self.parameterTextField.inputView;
     NSString *finalSelectedString = [pickerView.delegate pickerView:pickerView titleForRow:[pickerView selectedRowInComponent:0] forComponent:0];
     self.parameterTextField.text = finalSelectedString;
     [self.parameterTextField resignFirstResponder];
     [self enableSliderForParameter:finalSelectedString];
+}
+
+- (void)partDoneAction {
+    UIPickerView *pickerView = (UIPickerView *)self.partTextField.inputView;
+    NSString *finalSelectedString = [pickerView.delegate pickerView:pickerView titleForRow:[pickerView selectedRowInComponent:0] forComponent:0];
+    self.partTextField.text = finalSelectedString;
+    [self.partTextField resignFirstResponder];
+    [self enableSwitchForPart:finalSelectedString];
 }
 
 #pragma mark * misc
@@ -103,7 +153,11 @@
     self.valueSlider.minimumValue = self.live2DViewController.loader.parameter[parameter].min * 100;
     self.valueSlider.maximumValue = self.live2DViewController.loader.parameter[parameter].max * 100;
     self.valueSlider.value = self.live2DViewController.loader.parameter[parameter].value * 100;
-    
+}
+
+- (void)enableSwitchForPart:(NSString *)part {
+    self.partSwitch.enabled = YES;
+    self.partSwitch.on = self.live2DViewController.loader.part[part].value;
 }
 
 #pragma mark * Gestures
@@ -145,8 +199,9 @@
     [super viewDidLoad];
 
     [self setupInitValues];
-    [self setupParameterTextField];
     [self setupLive2DModel];
+    [self setupParameterTextField];
+    [self setupPartTextField];
     [self setupGestures];
 }
 

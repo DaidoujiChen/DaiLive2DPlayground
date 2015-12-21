@@ -38,6 +38,14 @@ using namespace live2d;
     return self.live2DModel->getParamFloat(parameter.UTF8String);
 }
 
+- (void)setValue:(double)value forPart:(NSString *)part {
+    self.live2DModel->setPartsOpacity(part.UTF8String, value);
+}
+
+- (double)valueForPart:(NSString *)part {
+    return self.live2DModel->getPartsOpacity(part.UTF8String);
+}
+
 #pragma mark - GLKViewDelegate
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {
@@ -140,8 +148,8 @@ using namespace live2d;
     
     // 設置畫面相關設定
     GLKView *view = (GLKView *)self.view;
-     view.context = self.context;
-     view.drawableDepthFormat = GLKViewDrawableDepthFormat24;
+    view.context = self.context;
+    view.drawableDepthFormat = GLKViewDrawableDepthFormat24;
     [self setupGL];
     [self setupModel];
 }

@@ -102,10 +102,18 @@ PARAM_BODY_ANGLE_Z
 PARAM_BREATH
 0.0 ~ 1.0
 
-// 左手動作
+// 左手動作(A 類型)
 PARAM_ARM_L_A
 -1.0 ~ 1.0
 
-// 右手動作
+// 右手動作(A 類型)
 PARAM_ARM_R_A
+-1.0 ~ 1.0
+
+// 左手動作(B 類型)
+PARAM_ARM_L_B
+-1.0 ~ 1.0
+
+// 右手動作(B 類型)
+PARAM_ARM_R_B
 -1.0 ~ 1.0
