@@ -73,8 +73,10 @@
 
 // 操作該變數
 - (Live2DParameter *)parameter {
-    Live2DParameter *parameter = [Live2DParameter new];
-    parameter.delegate = self;
+    Live2DParameter *parameter = [Live2DParameter shard];
+    if (!parameter.delegate) {
+        parameter.delegate = self;
+    }
     return parameter;
 }
 
@@ -88,8 +90,10 @@
 
 // 操作該部位
 - (Live2DPart *)part {
-    Live2DPart *part = [Live2DPart new];
-    part.delegate = self;
+    Live2DPart *part = [Live2DPart shard];
+    if (!part.delegate) {
+        part.delegate = self;
+    }
     return part;
 }
 
@@ -115,6 +119,7 @@
         self.basePath = [self.bundlePath stringByAppendingString:[path stringByReplacingOccurrencesOfString:lastPathComponent withString:@""]];
         self.modelInfo = [self dictionaryFromPlistBundlePath:path];
         if (!self.modelInfo) {
+            NSAssert(0, @"Load Plist Fail");
             return nil;
         }
     }

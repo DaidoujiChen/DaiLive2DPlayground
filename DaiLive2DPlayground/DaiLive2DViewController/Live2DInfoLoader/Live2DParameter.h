@@ -16,6 +16,8 @@
 
 @property (nonatomic, weak) id <Live2DParameterDelegate> delegate;
 
++ (Live2DParameter *)shard;
+
 - (Live2DParameterValue *)objectForKeyedSubscript:(NSString *)parameter;
 
 @end

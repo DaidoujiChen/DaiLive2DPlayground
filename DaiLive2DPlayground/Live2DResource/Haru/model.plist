@@ -222,6 +222,27 @@
 			<key>Max</key>
 			<integer>1</integer>
 		</dict>
+		<key>PARAM_BUST_Y</key>
+		<dict>
+			<key>Min</key>
+			<integer>-1</integer>
+			<key>Max</key>
+			<integer>1</integer>
+		</dict>
+		<key>PARAM_HAIR_FRONT</key>
+		<dict>
+			<key>Min</key>
+			<integer>-1</integer>
+			<key>Max</key>
+			<integer>1</integer>
+		</dict>
+		<key>PARAM_HAIR_BACK</key>
+		<dict>
+			<key>Min</key>
+			<integer>-1</integer>
+			<key>Max</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>ModelPart</key>
 	<array>

@@ -13,6 +13,8 @@
 		1C02FDD31C27C37400427FE7 /* Wankoromochi in Resources */ = {isa = PBXBuildFile; fileRef = 1C02FDD21C27C37400427FE7 /* Wankoromochi */; };
 		1C1D59D21C27AA0100C1B20D /* Live2DPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1D59D11C27AA0100C1B20D /* Live2DPart.m */; };
 		1C1D59D51C27AA3100C1B20D /* Live2DPartValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1D59D41C27AA3100C1B20D /* Live2DPartValue.m */; };
+		1C38C59D1C28FE3F00F1D493 /* MikuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C38C59C1C28FE3F00F1D493 /* MikuViewController.m */; };
+		1C38C59F1C28FF3800F1D493 /* Miku in Resources */ = {isa = PBXBuildFile; fileRef = 1C38C59E1C28FF3800F1D493 /* Miku */; };
 		1C471A9E1C215D2A0050FAFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C471A9D1C215D2A0050FAFB /* main.m */; };
 		1C471AA11C215D2A0050FAFB /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1C471AA01C215D2A0050FAFB /* AppDelegate.mm */; };
 		1C471AA91C215D2A0050FAFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C471AA81C215D2A0050FAFB /* Assets.xcassets */; };
@@ -40,6 +42,9 @@
 		1C1D59D11C27AA0100C1B20D /* Live2DPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Live2DPart.m; sourceTree = "<group>"; };
 		1C1D59D31C27AA3100C1B20D /* Live2DPartValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Live2DPartValue.h; sourceTree = "<group>"; };
 		1C1D59D41C27AA3100C1B20D /* Live2DPartValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Live2DPartValue.m; sourceTree = "<group>"; };
+		1C38C59B1C28FE3F00F1D493 /* MikuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MikuViewController.h; sourceTree = "<group>"; };
+		1C38C59C1C28FE3F00F1D493 /* MikuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MikuViewController.m; sourceTree = "<group>"; };
+		1C38C59E1C28FF3800F1D493 /* Miku */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Miku; sourceTree = "<group>"; };
 		1C471A991C215D2A0050FAFB /* DaiLive2DPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaiLive2DPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C471A9D1C215D2A0050FAFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1C471A9F1C215D2A0050FAFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,6 +90,15 @@
 			path = WankoromochiViewController;
 			sourceTree = "<group>";
 		};
+		1C38C59A1C28FE2B00F1D493 /* MikuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1C38C59B1C28FE3F00F1D493 /* MikuViewController.h */,
+				1C38C59C1C28FE3F00F1D493 /* MikuViewController.m */,
+			);
+			path = MikuViewController;
+			sourceTree = "<group>";
+		};
 		1C471A901C215D2A0050FAFB = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +121,7 @@
 				1CC545DE1C2256C700200870 /* DaiLive2DViewController */,
 				1C5DE0C91C27B26900BD656F /* HaruViewController */,
 				1C02FDCE1C27C2A800427FE7 /* WankoromochiViewController */,
+				1C38C59A1C28FE2B00F1D493 /* MikuViewController */,
 				1C471A9F1C215D2A0050FAFB /* AppDelegate.h */,
 				1C471AA01C215D2A0050FAFB /* AppDelegate.mm */,
 				1C471AB31C215DB20050FAFB /* MainViewController */,
@@ -151,6 +166,7 @@
 		1C471B5D1C2166BE0050FAFB /* Live2DResource */ = {
 			isa = PBXGroup;
 			children = (
+				1C38C59E1C28FF3800F1D493 /* Miku */,
 				1C02FDD21C27C37400427FE7 /* Wankoromochi */,
 				1C7603D21C22B3AA00B315F3 /* Haru */,
 			);
@@ -255,6 +271,7 @@
 				1C471ABA1C215EB40050FAFB /* Launch Screen.storyboard in Resources */,
 				1C471AA91C215D2A0050FAFB /* Assets.xcassets in Resources */,
 				1C02FDD31C27C37400427FE7 /* Wankoromochi in Resources */,
+				1C38C59F1C28FF3800F1D493 /* Miku in Resources */,
 				1C471AB81C215DD90050FAFB /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +287,7 @@
 				1C471AB71C215DD90050FAFB /* MainViewController.m in Sources */,
 				017AA12B1C26EC2C0068D1FF /* Live2DParameterValue.m in Sources */,
 				1C471A9E1C215D2A0050FAFB /* main.m in Sources */,
+				1C38C59D1C28FE3F00F1D493 /* MikuViewController.m in Sources */,
 				1C1D59D21C27AA0100C1B20D /* Live2DPart.m in Sources */,
 				01FFBD051C24558B0039A5A7 /* Live2DParameter.m in Sources */,
 				1C02FDD11C27C2BA00427FE7 /* WankoromochiViewController.m in Sources */,

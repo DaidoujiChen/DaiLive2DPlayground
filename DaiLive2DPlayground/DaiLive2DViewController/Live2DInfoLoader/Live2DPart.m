@@ -23,6 +23,16 @@
     return objc_getAssociatedObject(self, _cmd)[part];
 }
 
+#pragma mark - Class Method
+
++ (Live2DPart *)shard {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        objc_setAssociatedObject(self, _cmd, [Live2DPart new], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    });
+    return objc_getAssociatedObject(self, _cmd);
+}
+
 #pragma mark - Live2DPartValueDelegate
 
 // 改變 part 值

@@ -23,6 +23,16 @@
     return objc_getAssociatedObject(self, _cmd)[parameter];
 }
 
+#pragma mark - Class Method
+
++ (Live2DParameter *)shard {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        objc_setAssociatedObject(self, _cmd, [Live2DParameter new], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    });
+    return objc_getAssociatedObject(self, _cmd);
+}
+
 #pragma mark - Live2DParameterValueDelegate
 
 // 改變 parameter 值

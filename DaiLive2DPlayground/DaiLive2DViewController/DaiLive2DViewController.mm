@@ -108,6 +108,7 @@ using namespace live2d;
     if (self) {
         self.loader = [[Live2DInfoLoader alloc] initFromBundlePath:path];
         if (!self.loader) {
+            NSAssert(0, @"Loader Init Fail");
             return nil;
         }
         self.loader.delegate = self;
