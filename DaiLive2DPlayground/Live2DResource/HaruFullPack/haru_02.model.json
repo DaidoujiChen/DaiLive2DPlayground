@@ -1,0 +1,53 @@
+{
+	"type":"Live2D Model Setting",
+	"model":"haru_02.moc",
+	"textures":
+	[
+		"haru_02.1024/texture_00.png",
+		"haru_02.1024/texture_01.png",
+		"haru_02.1024/texture_02.png"
+	],
+	"physics":"haru.physics.json",
+	"pose":"haru.pose.json",
+	"expressions":
+	[
+	 {"name":"f01","file":"motions/expressions/f01.exp.json"},
+	 {"name":"f02","file":"motions/expressions/f02.exp.json"},
+	 {"name":"f03","file":"motions/expressions/f03.exp.json"},
+	 {"name":"f04","file":"motions/expressions/f04.exp.json"},
+	 {"name":"f05","file":"motions/expressions/f05.exp.json"},
+	 {"name":"f06","file":"motions/expressions/f06.exp.json"},
+	 {"name":"f07","file":"motions/expressions/f07.exp.json"},
+	 {"name":"f08","file":"motions/expressions/f08.exp.json"}
+	],
+	"layout":
+    {
+        "center_x":0,
+        "y":1.2,
+        "width":2.9
+    },
+	"hit_areas":
+	[
+		{"name":"head", "id":"D_REF.HEAD"},
+		{"name":"body", "id":"D_REF.BODY"}
+	],
+	"motions":
+	{
+		"idle":
+		[
+			{"file":"motions/idle/haru_idle_01.mtn" ,"fade_in":2000, "fade_out":2000},
+			{"file":"motions/idle/haru_idle_02.mtn" ,"fade_in":2000, "fade_out":2000},
+			{"file":"motions/idle/haru_idle_03.mtn" ,"fade_in":2000, "fade_out":2000}
+		],
+		"tap_body":
+		[
+			{ "file":"motions/tap/haru_m_01.mtn" },
+			{ "file":"motions/tap/haru_m_02.mtn" },
+			{ "file":"motions/tap/haru_m_03.mtn" },
+			{ "file":"motions/tap/haru_m_04.mtn" },
+			{ "file":"motions/tap/haru_m_05.mtn" },
+			{ "file":"motions/tap/haru_m_06.mtn" },
+			{ "file":"motions/tap/haru_m_07.mtn" }
+		]
+	}
+}

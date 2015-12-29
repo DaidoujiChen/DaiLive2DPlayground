@@ -1,0 +1,50 @@
+{
+    "type":"Live2D Model Setting",
+    "name":"wanko",
+    "model":"wanko.moc",
+    "textures":
+    [
+		"wanko.1024/texture_00.png"
+    ],
+	"hit_areas":
+	[
+		{"name":"body","id":"D_REF.PT_SOBA_01"}
+	],
+	"layout":
+	{
+		"center_x":0,
+		"y":1.8,
+		"width":2.9
+	},
+	"motions":
+	{
+		"idle":
+		[
+			{"file":"motions/idle/idl_01.mtn" ,"fade_in":500, "fade_out":200},
+			{"file":"motions/idle/idl_02.mtn" ,"fade_in":500, "fade_out":200},
+			{"file":"motions/idle/idl_03.mtn" ,"fade_in":500, "fade_out":200},
+			{"file":"motions/idle/idl_04.mtn" ,"fade_in":500, "fade_out":200}
+        ],
+       "shake":
+		[
+			{ "file":"motions/shake/shake_01.mtn","fade_in":500 },
+			{ "file":"motions/shake/shake_02.mtn","fade_in":500 }
+		],
+		"tap_body":
+		[
+			{"file":"motions/tap/01_ote.mtn"		,"fade_in":500},
+			{"file":"motions/tap/02_okawari.mtn"	,"fade_in":500},
+			{"file":"motions/tap/03_tatsu.mtn"	,"fade_in":500},
+			{"file":"motions/tap/04_wan.mtn"		,"fade_in":500},
+			{"file":"motions/tap/05_wanwan.mtn"	,"fade_in":500},
+			{"file":"motions/tap/06_runrun.mtn"	,"fade_in":500},
+			{"file":"motions/tap/07_buruburu.mtn","fade_in":500},
+			{"file":"motions/tap/08_petan.mtn"	,"fade_in":500},
+			{"file":"motions/tap/09_doya.mtn"	,"fade_in":500},
+			{"file":"motions/tap/10_kiri.mtn"	,"fade_in":500},
+			{"file":"motions/tap/11_dance01.mtn"	,"fade_in":500},
+			{"file":"motions/tap/12_dance02.mtn"	,"fade_in":500},
+			{"file":"motions/tap/13_dance03.mtn"	,"fade_in":500}
+		]
+	}
+}

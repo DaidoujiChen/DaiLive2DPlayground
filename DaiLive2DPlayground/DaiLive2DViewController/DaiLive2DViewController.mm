@@ -106,6 +106,7 @@ using namespace live2d;
 - (id)initFromBundlePath:(NSString *)path {
     self = [super init];
     if (self) {
+        Live2D::init();
         self.loader = [[Live2DInfoLoader alloc] initFromBundlePath:path];
         if (!self.loader) {
             NSAssert(0, @"Loader Init Fail");
@@ -119,6 +120,7 @@ using namespace live2d;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.paused = NO;
     self.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES1];
     self.scale = 1.0;
     self.position = CGPointZero;
@@ -138,6 +140,7 @@ using namespace live2d;
 
 - (void)dealloc {
     [self tearDownGL];
+    Live2D::dispose();
 }
 
 @end

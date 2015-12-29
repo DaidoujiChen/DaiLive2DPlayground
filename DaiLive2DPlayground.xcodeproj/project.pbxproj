@@ -11,21 +11,53 @@
 		01FFBD051C24558B0039A5A7 /* Live2DParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FFBD041C24558B0039A5A7 /* Live2DParameter.m */; };
 		1C02FDD11C27C2BA00427FE7 /* WankoromochiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C02FDD01C27C2BA00427FE7 /* WankoromochiViewController.m */; };
 		1C02FDD31C27C37400427FE7 /* Wankoromochi in Resources */ = {isa = PBXBuildFile; fileRef = 1C02FDD21C27C37400427FE7 /* Wankoromochi */; };
+		1C168E5F1C312C080001F180 /* AccelHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1C168E411C312C080001F180 /* AccelHelper.mm */; };
+		1C168E611C312C080001F180 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C168E451C312C080001F180 /* FileManager.m */; };
+		1C168E631C312C080001F180 /* LAppLive2DManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1C168E4A1C312C080001F180 /* LAppLive2DManager.mm */; };
+		1C168E641C312C080001F180 /* LAppModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1C168E4C1C312C080001F180 /* LAppModel.mm */; };
+		1C168E651C312C080001F180 /* LAppRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1C168E4E1C312C080001F180 /* LAppRenderer.mm */; };
+		1C168E661C312C080001F180 /* LAppTextureDesc.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1C168E501C312C080001F180 /* LAppTextureDesc.mm */; };
+		1C168E671C312C080001F180 /* LAppView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1C168E521C312C080001F180 /* LAppView.mm */; };
+		1C168E681C312C080001F180 /* OffScreenImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C168E561C312C080001F180 /* OffScreenImage.m */; };
+		1C168E691C312C080001F180 /* PlatformManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1C168E581C312C080001F180 /* PlatformManager.mm */; };
+		1C168E6A1C312C080001F180 /* SimpleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C168E5A1C312C080001F180 /* SimpleImage.m */; };
+		1C168E6B1C312C080001F180 /* TouchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C168E5C1C312C080001F180 /* TouchManager.m */; };
+		1C168E6E1C312C620001F180 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C168E6D1C312C620001F180 /* AVFoundation.framework */; };
+		1C168E8A1C312E9B0001F180 /* L2DBaseModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C168E711C312E9B0001F180 /* L2DBaseModel.cpp */; };
+		1C168E8B1C312E9B0001F180 /* L2DExpressionMotion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C168E731C312E9B0001F180 /* L2DExpressionMotion.cpp */; };
+		1C168E8C1C312E9B0001F180 /* L2DEyeBlink.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C168E751C312E9B0001F180 /* L2DEyeBlink.cpp */; };
+		1C168E8D1C312E9B0001F180 /* L2DMatrix44.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C168E771C312E9B0001F180 /* L2DMatrix44.cpp */; };
+		1C168E8E1C312E9B0001F180 /* L2DModelMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C168E791C312E9B0001F180 /* L2DModelMatrix.cpp */; };
+		1C168E8F1C312E9B0001F180 /* L2DMotionManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C168E7B1C312E9B0001F180 /* L2DMotionManager.cpp */; };
+		1C168E901C312E9B0001F180 /* L2DPhysics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C168E7D1C312E9B0001F180 /* L2DPhysics.cpp */; };
+		1C168E911C312E9B0001F180 /* L2DPose.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C168E7F1C312E9B0001F180 /* L2DPose.cpp */; };
+		1C168E921C312E9B0001F180 /* L2DTargetPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C168E821C312E9B0001F180 /* L2DTargetPoint.cpp */; };
+		1C168E931C312E9B0001F180 /* L2DTextureDesc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C168E841C312E9B0001F180 /* L2DTextureDesc.cpp */; };
+		1C168E941C312E9B0001F180 /* L2DViewMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C168E861C312E9B0001F180 /* L2DViewMatrix.cpp */; };
+		1C168E951C312E9B0001F180 /* Live2DFramework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C168E881C312E9B0001F180 /* Live2DFramework.cpp */; };
 		1C1D59D21C27AA0100C1B20D /* Live2DPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1D59D11C27AA0100C1B20D /* Live2DPart.m */; };
 		1C1D59D51C27AA3100C1B20D /* Live2DPartValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1D59D41C27AA3100C1B20D /* Live2DPartValue.m */; };
 		1C38C59D1C28FE3F00F1D493 /* MikuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C38C59C1C28FE3F00F1D493 /* MikuViewController.m */; };
 		1C38C59F1C28FF3800F1D493 /* Miku in Resources */ = {isa = PBXBuildFile; fileRef = 1C38C59E1C28FF3800F1D493 /* Miku */; };
 		1C471A9E1C215D2A0050FAFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C471A9D1C215D2A0050FAFB /* main.m */; };
-		1C471AA11C215D2A0050FAFB /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1C471AA01C215D2A0050FAFB /* AppDelegate.mm */; };
+		1C471AA11C215D2A0050FAFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C471AA01C215D2A0050FAFB /* AppDelegate.m */; };
 		1C471AA91C215D2A0050FAFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C471AA81C215D2A0050FAFB /* Assets.xcassets */; };
-		1C471AB71C215DD90050FAFB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C471AB51C215DD90050FAFB /* MainViewController.m */; };
-		1C471AB81C215DD90050FAFB /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C471AB61C215DD90050FAFB /* MainViewController.xib */; };
 		1C471ABA1C215EB40050FAFB /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C471AB91C215EB40050FAFB /* Launch Screen.storyboard */; };
 		1C471B5A1C2166500050FAFB /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C471B581C2166500050FAFB /* GLKit.framework */; };
 		1C471B5B1C2166500050FAFB /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C471B591C2166500050FAFB /* OpenGLES.framework */; };
 		1C471C481C217DCB0050FAFB /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C471C471C217DCB0050FAFB /* CoreMotion.framework */; };
+		1C4C7DCC1C350626001E3C6B /* OfficalViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C7DCB1C350626001E3C6B /* OfficalViewController.mm */; };
+		1C4C7DD11C350A00001E3C6B /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C7DCF1C350A00001E3C6B /* CustomViewController.m */; };
+		1C4C7DD21C350A00001E3C6B /* CustomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C4C7DD01C350A00001E3C6B /* CustomViewController.xib */; };
+		1C4C7DD71C350AAD001E3C6B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C7DD51C350AAD001E3C6B /* MainViewController.m */; };
+		1C4C7DD81C350AAD001E3C6B /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C4C7DD61C350AAD001E3C6B /* MainViewController.xib */; };
+		1C59143C1C33918F0092B353 /* ModelSetting.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1C59143B1C33918F0092B353 /* ModelSetting.mm */; };
 		1C5DE0CC1C27B29200BD656F /* HaruViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5DE0CB1C27B29200BD656F /* HaruViewController.m */; };
+		1C6558F01C33EB2200F1496B /* ShizukuFullPack in Resources */ = {isa = PBXBuildFile; fileRef = 1C6558EE1C33EB2200F1496B /* ShizukuFullPack */; };
+		1C6558F11C33EB2200F1496B /* WankoFullPack in Resources */ = {isa = PBXBuildFile; fileRef = 1C6558EF1C33EB2200F1496B /* WankoFullPack */; };
 		1C7603D31C22B3AA00B315F3 /* Haru in Resources */ = {isa = PBXBuildFile; fileRef = 1C7603D21C22B3AA00B315F3 /* Haru */; };
+		1C7C01461C322CDE006F6104 /* HaruFullPack in Resources */ = {isa = PBXBuildFile; fileRef = 1C7C01451C322CDD006F6104 /* HaruFullPack */; };
+		1C7C01481C322D2B006F6104 /* back_class_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C7C01471C322D2B006F6104 /* back_class_normal.png */; };
 		1CC545E11C2256DF00200870 /* DaiLive2DViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1CC545E01C2256DF00200870 /* DaiLive2DViewController.mm */; };
 		1CD60DD31C23DB4A002ABB0E /* Live2DInfoLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD60DD21C23DB4A002ABB0E /* Live2DInfoLoader.m */; };
 /* End PBXBuildFile section */
@@ -38,6 +70,56 @@
 		1C02FDCF1C27C2BA00427FE7 /* WankoromochiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WankoromochiViewController.h; sourceTree = "<group>"; };
 		1C02FDD01C27C2BA00427FE7 /* WankoromochiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WankoromochiViewController.m; sourceTree = "<group>"; };
 		1C02FDD21C27C37400427FE7 /* Wankoromochi */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Wankoromochi; sourceTree = "<group>"; };
+		1C168E401C312C080001F180 /* AccelHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccelHelper.h; sourceTree = "<group>"; };
+		1C168E411C312C080001F180 /* AccelHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AccelHelper.mm; sourceTree = "<group>"; };
+		1C168E441C312C080001F180 /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
+		1C168E451C312C080001F180 /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
+		1C168E481C312C080001F180 /* LAppDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAppDefine.h; sourceTree = "<group>"; };
+		1C168E491C312C080001F180 /* LAppLive2DManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAppLive2DManager.h; sourceTree = "<group>"; };
+		1C168E4A1C312C080001F180 /* LAppLive2DManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LAppLive2DManager.mm; sourceTree = "<group>"; };
+		1C168E4B1C312C080001F180 /* LAppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAppModel.h; sourceTree = "<group>"; };
+		1C168E4C1C312C080001F180 /* LAppModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LAppModel.mm; sourceTree = "<group>"; };
+		1C168E4D1C312C080001F180 /* LAppRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAppRenderer.h; sourceTree = "<group>"; };
+		1C168E4E1C312C080001F180 /* LAppRenderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LAppRenderer.mm; sourceTree = "<group>"; };
+		1C168E4F1C312C080001F180 /* LAppTextureDesc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAppTextureDesc.h; sourceTree = "<group>"; };
+		1C168E501C312C080001F180 /* LAppTextureDesc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LAppTextureDesc.mm; sourceTree = "<group>"; };
+		1C168E511C312C080001F180 /* LAppView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAppView.h; sourceTree = "<group>"; };
+		1C168E521C312C080001F180 /* LAppView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LAppView.mm; sourceTree = "<group>"; };
+		1C168E551C312C080001F180 /* OffScreenImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OffScreenImage.h; sourceTree = "<group>"; };
+		1C168E561C312C080001F180 /* OffScreenImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OffScreenImage.m; sourceTree = "<group>"; };
+		1C168E571C312C080001F180 /* PlatformManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformManager.h; sourceTree = "<group>"; };
+		1C168E581C312C080001F180 /* PlatformManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PlatformManager.mm; sourceTree = "<group>"; };
+		1C168E591C312C080001F180 /* SimpleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleImage.h; sourceTree = "<group>"; };
+		1C168E5A1C312C080001F180 /* SimpleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleImage.m; sourceTree = "<group>"; };
+		1C168E5B1C312C080001F180 /* TouchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchManager.h; sourceTree = "<group>"; };
+		1C168E5C1C312C080001F180 /* TouchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchManager.m; sourceTree = "<group>"; };
+		1C168E6D1C312C620001F180 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1C168E701C312E9B0001F180 /* IPlatformManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPlatformManager.h; sourceTree = "<group>"; };
+		1C168E711C312E9B0001F180 /* L2DBaseModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = L2DBaseModel.cpp; sourceTree = "<group>"; };
+		1C168E721C312E9B0001F180 /* L2DBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = L2DBaseModel.h; sourceTree = "<group>"; };
+		1C168E731C312E9B0001F180 /* L2DExpressionMotion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = L2DExpressionMotion.cpp; sourceTree = "<group>"; };
+		1C168E741C312E9B0001F180 /* L2DExpressionMotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = L2DExpressionMotion.h; sourceTree = "<group>"; };
+		1C168E751C312E9B0001F180 /* L2DEyeBlink.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = L2DEyeBlink.cpp; sourceTree = "<group>"; };
+		1C168E761C312E9B0001F180 /* L2DEyeBlink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = L2DEyeBlink.h; sourceTree = "<group>"; };
+		1C168E771C312E9B0001F180 /* L2DMatrix44.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = L2DMatrix44.cpp; sourceTree = "<group>"; };
+		1C168E781C312E9B0001F180 /* L2DMatrix44.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = L2DMatrix44.h; sourceTree = "<group>"; };
+		1C168E791C312E9B0001F180 /* L2DModelMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = L2DModelMatrix.cpp; sourceTree = "<group>"; };
+		1C168E7A1C312E9B0001F180 /* L2DModelMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = L2DModelMatrix.h; sourceTree = "<group>"; };
+		1C168E7B1C312E9B0001F180 /* L2DMotionManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = L2DMotionManager.cpp; sourceTree = "<group>"; };
+		1C168E7C1C312E9B0001F180 /* L2DMotionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = L2DMotionManager.h; sourceTree = "<group>"; };
+		1C168E7D1C312E9B0001F180 /* L2DPhysics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = L2DPhysics.cpp; sourceTree = "<group>"; };
+		1C168E7E1C312E9B0001F180 /* L2DPhysics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = L2DPhysics.h; sourceTree = "<group>"; };
+		1C168E7F1C312E9B0001F180 /* L2DPose.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = L2DPose.cpp; sourceTree = "<group>"; };
+		1C168E801C312E9B0001F180 /* L2DPose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = L2DPose.h; sourceTree = "<group>"; };
+		1C168E811C312E9B0001F180 /* L2DStandardID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = L2DStandardID.h; sourceTree = "<group>"; };
+		1C168E821C312E9B0001F180 /* L2DTargetPoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = L2DTargetPoint.cpp; sourceTree = "<group>"; };
+		1C168E831C312E9B0001F180 /* L2DTargetPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = L2DTargetPoint.h; sourceTree = "<group>"; };
+		1C168E841C312E9B0001F180 /* L2DTextureDesc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = L2DTextureDesc.cpp; sourceTree = "<group>"; };
+		1C168E851C312E9B0001F180 /* L2DTextureDesc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = L2DTextureDesc.h; sourceTree = "<group>"; };
+		1C168E861C312E9B0001F180 /* L2DViewMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = L2DViewMatrix.cpp; sourceTree = "<group>"; };
+		1C168E871C312E9B0001F180 /* L2DViewMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = L2DViewMatrix.h; sourceTree = "<group>"; };
+		1C168E881C312E9B0001F180 /* Live2DFramework.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Live2DFramework.cpp; sourceTree = "<group>"; };
+		1C168E891C312E9B0001F180 /* Live2DFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Live2DFramework.h; sourceTree = "<group>"; };
 		1C1D59D01C27AA0100C1B20D /* Live2DPart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Live2DPart.h; sourceTree = "<group>"; };
 		1C1D59D11C27AA0100C1B20D /* Live2DPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Live2DPart.m; sourceTree = "<group>"; };
 		1C1D59D31C27AA3100C1B20D /* Live2DPartValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Live2DPartValue.h; sourceTree = "<group>"; };
@@ -48,19 +130,30 @@
 		1C471A991C215D2A0050FAFB /* DaiLive2DPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaiLive2DPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C471A9D1C215D2A0050FAFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1C471A9F1C215D2A0050FAFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		1C471AA01C215D2A0050FAFB /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		1C471AA01C215D2A0050FAFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1C471AA81C215D2A0050FAFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C471AAD1C215D2A0050FAFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1C471AB41C215DD90050FAFB /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		1C471AB51C215DD90050FAFB /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		1C471AB61C215DD90050FAFB /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		1C471AB91C215EB40050FAFB /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		1C471B581C2166500050FAFB /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		1C471B591C2166500050FAFB /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		1C471C471C217DCB0050FAFB /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		1C4C7DCA1C350626001E3C6B /* OfficalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfficalViewController.h; sourceTree = "<group>"; };
+		1C4C7DCB1C350626001E3C6B /* OfficalViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OfficalViewController.mm; sourceTree = "<group>"; };
+		1C4C7DCE1C350A00001E3C6B /* CustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
+		1C4C7DCF1C350A00001E3C6B /* CustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
+		1C4C7DD01C350A00001E3C6B /* CustomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomViewController.xib; sourceTree = "<group>"; };
+		1C4C7DD41C350AAD001E3C6B /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		1C4C7DD51C350AAD001E3C6B /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		1C4C7DD61C350AAD001E3C6B /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		1C59143A1C33918F0092B353 /* ModelSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelSetting.h; sourceTree = "<group>"; };
+		1C59143B1C33918F0092B353 /* ModelSetting.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ModelSetting.mm; sourceTree = "<group>"; };
 		1C5DE0CA1C27B29200BD656F /* HaruViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HaruViewController.h; sourceTree = "<group>"; };
 		1C5DE0CB1C27B29200BD656F /* HaruViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HaruViewController.m; sourceTree = "<group>"; };
+		1C6558EE1C33EB2200F1496B /* ShizukuFullPack */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ShizukuFullPack; sourceTree = "<group>"; };
+		1C6558EF1C33EB2200F1496B /* WankoFullPack */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WankoFullPack; sourceTree = "<group>"; };
 		1C7603D21C22B3AA00B315F3 /* Haru */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Haru; sourceTree = "<group>"; };
+		1C7C01451C322CDD006F6104 /* HaruFullPack */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HaruFullPack; sourceTree = "<group>"; };
+		1C7C01471C322D2B006F6104 /* back_class_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_class_normal.png; sourceTree = "<group>"; };
 		1CC545DF1C2256DF00200870 /* DaiLive2DViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaiLive2DViewController.h; sourceTree = "<group>"; };
 		1CC545E01C2256DF00200870 /* DaiLive2DViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DaiLive2DViewController.mm; sourceTree = "<group>"; };
 		1CD60DD11C23DB4A002ABB0E /* Live2DInfoLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Live2DInfoLoader.h; sourceTree = "<group>"; };
@@ -72,6 +165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C168E6E1C312C620001F180 /* AVFoundation.framework in Frameworks */,
 				1C471C481C217DCB0050FAFB /* CoreMotion.framework in Frameworks */,
 				1C471B5A1C2166500050FAFB /* GLKit.framework in Frameworks */,
 				1C471B5B1C2166500050FAFB /* OpenGLES.framework in Frameworks */,
@@ -88,6 +182,71 @@
 				1C02FDD01C27C2BA00427FE7 /* WankoromochiViewController.m */,
 			);
 			path = WankoromochiViewController;
+			sourceTree = "<group>";
+		};
+		1C168E3F1C312C080001F180 /* OfficalLive2DTools */ = {
+			isa = PBXGroup;
+			children = (
+				1C168E481C312C080001F180 /* LAppDefine.h */,
+				1C168E401C312C080001F180 /* AccelHelper.h */,
+				1C168E411C312C080001F180 /* AccelHelper.mm */,
+				1C168E441C312C080001F180 /* FileManager.h */,
+				1C168E451C312C080001F180 /* FileManager.m */,
+				1C168E491C312C080001F180 /* LAppLive2DManager.h */,
+				1C168E4A1C312C080001F180 /* LAppLive2DManager.mm */,
+				1C168E4B1C312C080001F180 /* LAppModel.h */,
+				1C168E4C1C312C080001F180 /* LAppModel.mm */,
+				1C168E4D1C312C080001F180 /* LAppRenderer.h */,
+				1C168E4E1C312C080001F180 /* LAppRenderer.mm */,
+				1C168E4F1C312C080001F180 /* LAppTextureDesc.h */,
+				1C168E501C312C080001F180 /* LAppTextureDesc.mm */,
+				1C168E511C312C080001F180 /* LAppView.h */,
+				1C168E521C312C080001F180 /* LAppView.mm */,
+				1C59143A1C33918F0092B353 /* ModelSetting.h */,
+				1C59143B1C33918F0092B353 /* ModelSetting.mm */,
+				1C168E551C312C080001F180 /* OffScreenImage.h */,
+				1C168E561C312C080001F180 /* OffScreenImage.m */,
+				1C168E571C312C080001F180 /* PlatformManager.h */,
+				1C168E581C312C080001F180 /* PlatformManager.mm */,
+				1C168E591C312C080001F180 /* SimpleImage.h */,
+				1C168E5A1C312C080001F180 /* SimpleImage.m */,
+				1C168E5B1C312C080001F180 /* TouchManager.h */,
+				1C168E5C1C312C080001F180 /* TouchManager.m */,
+			);
+			path = OfficalLive2DTools;
+			sourceTree = "<group>";
+		};
+		1C168E6F1C312E9B0001F180 /* Live2DFramework */ = {
+			isa = PBXGroup;
+			children = (
+				1C168E701C312E9B0001F180 /* IPlatformManager.h */,
+				1C168E711C312E9B0001F180 /* L2DBaseModel.cpp */,
+				1C168E721C312E9B0001F180 /* L2DBaseModel.h */,
+				1C168E731C312E9B0001F180 /* L2DExpressionMotion.cpp */,
+				1C168E741C312E9B0001F180 /* L2DExpressionMotion.h */,
+				1C168E751C312E9B0001F180 /* L2DEyeBlink.cpp */,
+				1C168E761C312E9B0001F180 /* L2DEyeBlink.h */,
+				1C168E771C312E9B0001F180 /* L2DMatrix44.cpp */,
+				1C168E781C312E9B0001F180 /* L2DMatrix44.h */,
+				1C168E791C312E9B0001F180 /* L2DModelMatrix.cpp */,
+				1C168E7A1C312E9B0001F180 /* L2DModelMatrix.h */,
+				1C168E7B1C312E9B0001F180 /* L2DMotionManager.cpp */,
+				1C168E7C1C312E9B0001F180 /* L2DMotionManager.h */,
+				1C168E7D1C312E9B0001F180 /* L2DPhysics.cpp */,
+				1C168E7E1C312E9B0001F180 /* L2DPhysics.h */,
+				1C168E7F1C312E9B0001F180 /* L2DPose.cpp */,
+				1C168E801C312E9B0001F180 /* L2DPose.h */,
+				1C168E811C312E9B0001F180 /* L2DStandardID.h */,
+				1C168E821C312E9B0001F180 /* L2DTargetPoint.cpp */,
+				1C168E831C312E9B0001F180 /* L2DTargetPoint.h */,
+				1C168E841C312E9B0001F180 /* L2DTextureDesc.cpp */,
+				1C168E851C312E9B0001F180 /* L2DTextureDesc.h */,
+				1C168E861C312E9B0001F180 /* L2DViewMatrix.cpp */,
+				1C168E871C312E9B0001F180 /* L2DViewMatrix.h */,
+				1C168E881C312E9B0001F180 /* Live2DFramework.cpp */,
+				1C168E891C312E9B0001F180 /* Live2DFramework.h */,
+			);
+			path = Live2DFramework;
 			sourceTree = "<group>";
 		};
 		1C38C59A1C28FE2B00F1D493 /* MikuViewController */ = {
@@ -118,13 +277,17 @@
 		1C471A9B1C215D2A0050FAFB /* DaiLive2DPlayground */ = {
 			isa = PBXGroup;
 			children = (
+				1C168E6F1C312E9B0001F180 /* Live2DFramework */,
+				1C168E3F1C312C080001F180 /* OfficalLive2DTools */,
 				1CC545DE1C2256C700200870 /* DaiLive2DViewController */,
 				1C5DE0C91C27B26900BD656F /* HaruViewController */,
 				1C02FDCE1C27C2A800427FE7 /* WankoromochiViewController */,
 				1C38C59A1C28FE2B00F1D493 /* MikuViewController */,
 				1C471A9F1C215D2A0050FAFB /* AppDelegate.h */,
-				1C471AA01C215D2A0050FAFB /* AppDelegate.mm */,
-				1C471AB31C215DB20050FAFB /* MainViewController */,
+				1C471AA01C215D2A0050FAFB /* AppDelegate.m */,
+				1C4C7DD31C350A9C001E3C6B /* MainViewController */,
+				1C4C7DCD1C350A00001E3C6B /* CustomViewController */,
+				1C4C7DC91C3505FE001E3C6B /* OfficalViewController */,
 				1C471AB91C215EB40050FAFB /* Launch Screen.storyboard */,
 				1C471AA81C215D2A0050FAFB /* Assets.xcassets */,
 				1C471AAD1C215D2A0050FAFB /* Info.plist */,
@@ -143,19 +306,10 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1C471AB31C215DB20050FAFB /* MainViewController */ = {
-			isa = PBXGroup;
-			children = (
-				1C471AB41C215DD90050FAFB /* MainViewController.h */,
-				1C471AB51C215DD90050FAFB /* MainViewController.m */,
-				1C471AB61C215DD90050FAFB /* MainViewController.xib */,
-			);
-			path = MainViewController;
-			sourceTree = "<group>";
-		};
 		1C471B5C1C2166840050FAFB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1C168E6D1C312C620001F180 /* AVFoundation.framework */,
 				1C471C471C217DCB0050FAFB /* CoreMotion.framework */,
 				1C471B581C2166500050FAFB /* GLKit.framework */,
 				1C471B591C2166500050FAFB /* OpenGLES.framework */,
@@ -166,11 +320,44 @@
 		1C471B5D1C2166BE0050FAFB /* Live2DResource */ = {
 			isa = PBXGroup;
 			children = (
+				1C7C01471C322D2B006F6104 /* back_class_normal.png */,
+				1C6558EE1C33EB2200F1496B /* ShizukuFullPack */,
+				1C6558EF1C33EB2200F1496B /* WankoFullPack */,
+				1C7C01451C322CDD006F6104 /* HaruFullPack */,
 				1C38C59E1C28FF3800F1D493 /* Miku */,
 				1C02FDD21C27C37400427FE7 /* Wankoromochi */,
 				1C7603D21C22B3AA00B315F3 /* Haru */,
 			);
 			path = Live2DResource;
+			sourceTree = "<group>";
+		};
+		1C4C7DC91C3505FE001E3C6B /* OfficalViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1C4C7DCA1C350626001E3C6B /* OfficalViewController.h */,
+				1C4C7DCB1C350626001E3C6B /* OfficalViewController.mm */,
+			);
+			path = OfficalViewController;
+			sourceTree = "<group>";
+		};
+		1C4C7DCD1C350A00001E3C6B /* CustomViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1C4C7DCE1C350A00001E3C6B /* CustomViewController.h */,
+				1C4C7DCF1C350A00001E3C6B /* CustomViewController.m */,
+				1C4C7DD01C350A00001E3C6B /* CustomViewController.xib */,
+			);
+			path = CustomViewController;
+			sourceTree = "<group>";
+		};
+		1C4C7DD31C350A9C001E3C6B /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1C4C7DD41C350AAD001E3C6B /* MainViewController.h */,
+				1C4C7DD51C350AAD001E3C6B /* MainViewController.m */,
+				1C4C7DD61C350AAD001E3C6B /* MainViewController.xib */,
+			);
+			path = MainViewController;
 			sourceTree = "<group>";
 		};
 		1C5DE0C91C27B26900BD656F /* HaruViewController */ = {
@@ -267,12 +454,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C7C01461C322CDE006F6104 /* HaruFullPack in Resources */,
+				1C6558F01C33EB2200F1496B /* ShizukuFullPack in Resources */,
 				1C7603D31C22B3AA00B315F3 /* Haru in Resources */,
 				1C471ABA1C215EB40050FAFB /* Launch Screen.storyboard in Resources */,
 				1C471AA91C215D2A0050FAFB /* Assets.xcassets in Resources */,
+				1C4C7DD81C350AAD001E3C6B /* MainViewController.xib in Resources */,
 				1C02FDD31C27C37400427FE7 /* Wankoromochi in Resources */,
 				1C38C59F1C28FF3800F1D493 /* Miku in Resources */,
-				1C471AB81C215DD90050FAFB /* MainViewController.xib in Resources */,
+				1C4C7DD21C350A00001E3C6B /* CustomViewController.xib in Resources */,
+				1C7C01481C322D2B006F6104 /* back_class_normal.png in Resources */,
+				1C6558F11C33EB2200F1496B /* WankoFullPack in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,18 +475,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C471AA11C215D2A0050FAFB /* AppDelegate.mm in Sources */,
-				1C471AB71C215DD90050FAFB /* MainViewController.m in Sources */,
+				1C471AA11C215D2A0050FAFB /* AppDelegate.m in Sources */,
+				1C4C7DD11C350A00001E3C6B /* CustomViewController.m in Sources */,
 				017AA12B1C26EC2C0068D1FF /* Live2DParameterValue.m in Sources */,
+				1C168E6A1C312C080001F180 /* SimpleImage.m in Sources */,
 				1C471A9E1C215D2A0050FAFB /* main.m in Sources */,
+				1C168E901C312E9B0001F180 /* L2DPhysics.cpp in Sources */,
 				1C38C59D1C28FE3F00F1D493 /* MikuViewController.m in Sources */,
+				1C168E611C312C080001F180 /* FileManager.m in Sources */,
+				1C168E8E1C312E9B0001F180 /* L2DModelMatrix.cpp in Sources */,
 				1C1D59D21C27AA0100C1B20D /* Live2DPart.m in Sources */,
+				1C168E941C312E9B0001F180 /* L2DViewMatrix.cpp in Sources */,
+				1C168E951C312E9B0001F180 /* Live2DFramework.cpp in Sources */,
 				01FFBD051C24558B0039A5A7 /* Live2DParameter.m in Sources */,
 				1C02FDD11C27C2BA00427FE7 /* WankoromochiViewController.m in Sources */,
+				1C168E671C312C080001F180 /* LAppView.mm in Sources */,
+				1C168E8B1C312E9B0001F180 /* L2DExpressionMotion.cpp in Sources */,
+				1C168E931C312E9B0001F180 /* L2DTextureDesc.cpp in Sources */,
+				1C168E5F1C312C080001F180 /* AccelHelper.mm in Sources */,
+				1C168E691C312C080001F180 /* PlatformManager.mm in Sources */,
+				1C168E8C1C312E9B0001F180 /* L2DEyeBlink.cpp in Sources */,
+				1C168E661C312C080001F180 /* LAppTextureDesc.mm in Sources */,
 				1CC545E11C2256DF00200870 /* DaiLive2DViewController.mm in Sources */,
 				1CD60DD31C23DB4A002ABB0E /* Live2DInfoLoader.m in Sources */,
+				1C168E911C312E9B0001F180 /* L2DPose.cpp in Sources */,
+				1C168E8D1C312E9B0001F180 /* L2DMatrix44.cpp in Sources */,
+				1C4C7DD71C350AAD001E3C6B /* MainViewController.m in Sources */,
+				1C59143C1C33918F0092B353 /* ModelSetting.mm in Sources */,
+				1C168E6B1C312C080001F180 /* TouchManager.m in Sources */,
 				1C5DE0CC1C27B29200BD656F /* HaruViewController.m in Sources */,
+				1C168E681C312C080001F180 /* OffScreenImage.m in Sources */,
+				1C168E8F1C312E9B0001F180 /* L2DMotionManager.cpp in Sources */,
+				1C168E651C312C080001F180 /* LAppRenderer.mm in Sources */,
+				1C168E8A1C312E9B0001F180 /* L2DBaseModel.cpp in Sources */,
+				1C168E921C312E9B0001F180 /* L2DTargetPoint.cpp in Sources */,
+				1C4C7DCC1C350626001E3C6B /* OfficalViewController.mm in Sources */,
 				1C1D59D51C27AA3100C1B20D /* Live2DPartValue.m in Sources */,
+				1C168E641C312C080001F180 /* LAppModel.mm in Sources */,
+				1C168E631C312C080001F180 /* LAppLive2DManager.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +603,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -393,6 +613,7 @@
 					"$(inherited)",
 					L2D_TARGET_IPHONE,
 				);
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = DaiLive2DPlayground/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -401,10 +622,7 @@
 					"$(inherited)",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = (
-					"-lLive2D",
-					"-ObjC",
-				);
+				OTHER_LDFLAGS = "-lLive2D";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.daidouji.DaiLive2DPlayground;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/DaiLive2DPlayground/Live2DSDK/include\"";
@@ -416,10 +634,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = L2D_TARGET_IPHONE;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = DaiLive2DPlayground/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -428,10 +649,8 @@
 					"$(inherited)",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = (
-					"-lLive2D",
-					"-ObjC",
-				);
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-lLive2D";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.daidouji.DaiLive2DPlayground;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/DaiLive2DPlayground/Live2DSDK/include\"";

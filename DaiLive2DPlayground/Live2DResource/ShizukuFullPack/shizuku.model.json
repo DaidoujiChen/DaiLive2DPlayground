@@ -1,0 +1,73 @@
+{
+	"type":"Live2D Model Setting",
+	"name":"shizuku",
+	"model":"shizuku.moc",
+	"textures":
+	[
+		"shizuku.1024/texture_00.png",
+		"shizuku.1024/texture_01.png",
+		"shizuku.1024/texture_02.png",
+		"shizuku.1024/texture_03.png",
+		"shizuku.1024/texture_04.png",
+		"shizuku.1024/texture_05.png"
+	],
+	"physics":"shizuku.physics.json",
+	"pose":"shizuku.pose.json",
+	"expressions":
+	[
+	 {"name":"f01","file":"motions/expressions/f01.exp.json"},
+	 {"name":"f02","file":"motions/expressions/f02.exp.json"},
+	 {"name":"f03","file":"motions/expressions/f03.exp.json"},
+	 {"name":"f04","file":"motions/expressions/f04.exp.json"}
+	],
+	"layout":
+	{
+		"center_x":0,
+		"y":1.2,
+		"width":2.4
+	},
+	"hit_areas":
+	[
+		{"name":"head", "id":"D_REF.HEAD"},
+		{"name":"body", "id":"D_REF.BODY"}
+	],
+	"motions":
+	{
+		"idle":
+		[
+			{"file":"motions/idle/idl_00.mtn" ,"fade_in":2000, "fade_out":2000},
+			{"file":"motions/idle/idl_01.mtn" ,"fade_in":2000, "fade_out":2000},
+			{"file":"motions/idle/idl_02.mtn" ,"fade_in":2000, "fade_out":2000}
+		],
+		"tap_body":
+		[
+			{ "file":"motions/tap/tapBody01.mtn", "sound":"sounds/tap/tapBody01.mp3" },
+			{ "file":"motions/tap/tapBody02.mtn", "sound":"sounds/tap/tapBody02.mp3" },
+			{ "file":"motions/tap/tapBody03.mtn", "sound":"sounds/tap/tapBody03.mp3" }
+		],
+		"pinch_in":
+		[
+			{ "file":"motions/pinch/pinchIn01.mtn", "sound":"sounds/pinch/pinchIn01.mp3" },
+			{ "file":"motions/pinch/pinchIn02.mtn", "sound":"sounds/pinch/pinchIn02.mp3" },
+			{ "file":"motions/pinch/pinchIn03.mtn", "sound":"sounds/pinch/pinchIn03.mp3" }
+		],
+		"pinch_out":
+		[
+			{ "file":"motions/pinch/pinchOut01.mtn", "sound":"sounds/pinch/pinchOut01.mp3" },
+			{ "file":"motions/pinch/pinchOut02.mtn", "sound":"sounds/pinch/pinchOut02.mp3" },
+			{ "file":"motions/pinch/pinchOut03.mtn", "sound":"sounds/pinch/pinchOut03.mp3" }
+		],
+		"shake":
+		[
+			{ "file":"motions/shake/shake01.mtn", "sound":"sounds/shake/shake01.mp3","fade_in":500 },
+			{ "file":"motions/shake/shake02.mtn", "sound":"sounds/shake/shake02.mp3","fade_in":500 },
+			{ "file":"motions/shake/shake03.mtn", "sound":"sounds/shake/shake03.mp3","fade_in":500 }
+		],
+		"flick_head":
+		[
+			{ "file":"motions/flick/flickHead01.mtn", "sound":"sounds/flick/flickHead01.mp3" },
+			{ "file":"motions/flick/flickHead02.mtn", "sound":"sounds/flick/flickHead02.mp3" },
+			{ "file":"motions/flick/flickHead03.mtn", "sound":"sounds/flick/flickHead03.mp3" }
+		]
+	}
+}
