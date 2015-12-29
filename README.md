@@ -1,6 +1,6 @@
 # Get a girl friend in programming
 
-![image](https://s3-ap-northeast-1.amazonaws.com/daidoujiminecraft/Daidouji/DaiLive2DPlayground.gif)
+![image](https://s3-ap-northeast-1.amazonaws.com/daidoujiminecraft/Daidouji/DaiLive2DPlayground2.gif)
 
 雖然專案條是粉紅色的, 但卻是一個貨真價實 iOS 的專案, 在介接上, 用 `Swift` 去接 `C` 的 code 比較麻煩, 
 所以還是選擇 `Objective-C` 當作起手, `Get a girl friend in programming` 這個 Slogan 來自於 [paiza](https://paiza.jp/poh/ando), 
