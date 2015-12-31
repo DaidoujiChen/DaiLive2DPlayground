@@ -1,0 +1,66 @@
+{
+	"type":"Live2D Model Setting",
+	"name":"haru",
+	"model":"haru_01.moc",
+	"textures":
+	[
+		"haru_01.1024/texture_00.png",
+		"haru_01.1024/texture_01.png",
+		"haru_01.1024/texture_02.png"
+	],
+	"physics":"haru.physics.json",
+	"pose":"haru.pose.json",
+	"expressions":
+	[
+		{"name":"f01","file":"motions/expressions/f01.exp.json"},
+		{"name":"f02","file":"motions/expressions/f02.exp.json"},
+		{"name":"f03","file":"motions/expressions/f03.exp.json"},
+		{"name":"f04","file":"motions/expressions/f04.exp.json"},
+		{"name":"f05","file":"motions/expressions/f05.exp.json"},
+		{"name":"f06","file":"motions/expressions/f06.exp.json"},
+		{"name":"f07","file":"motions/expressions/f07.exp.json"},
+		{"name":"f08","file":"motions/expressions/f08.exp.json"}
+	],
+	"layout":
+	{
+		"center_x":0,
+		"y":1.2,
+		"width":2.9
+	},
+	"hit_areas":
+	[
+		{"name":"head", "id":"D_REF.HEAD"},
+		{"name":"body", "id":"D_REF.BODY"}
+	],
+	"motions":
+	{
+		"idle":
+		[
+			{"file":"motions/idle/haru_idle_01.mtn" ,"fade_in":2000, "fade_out":2000},
+			{"file":"motions/idle/haru_idle_02.mtn" ,"fade_in":2000, "fade_out":2000},
+			{"file":"motions/idle/haru_idle_03.mtn" ,"fade_in":2000, "fade_out":2000}
+		],
+		"tap_body":
+		[
+			{ "file":"motions/tap/haru_normal_02.mtn" , "sound":"sounds/tap/haru_normal_02.mp3"},
+			{ "file":"motions/tap/haru_normal_04.mtn" , "sound":"sounds/tap/haru_normal_04.mp3"},
+			{ "file":"motions/tap/haru_normal_05.mtn" , "sound":"sounds/tap/haru_normal_05.mp3"}
+		],
+		"pinch_in":
+		[
+			{ "file":"motions/pinch/haru_normal_07.mtn", "sound":"sounds/pinch/haru_normal_07.mp3" }
+		],
+		"pinch_out":
+		[
+			{ "file":"motions/pinch/haru_normal_01.mtn", "sound":"sounds/pinch/haru_normal_01.mp3" }
+		],
+		"shake":
+		[
+			{ "file":"motions/shake/haru_normal_03.mtn", "sound":"sounds/shake/haru_normal_03.mp3","fade_in":500 }
+		],
+		"flick_head":
+		[
+			{ "file":"motions/flick/haru_normal_06.mtn", "sound":"sounds/flick/haru_normal_06.mp3" }
+		]
+	}
+}
